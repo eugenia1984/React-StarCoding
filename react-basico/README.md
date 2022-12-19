@@ -1,4 +1,4 @@
-# <img src="https://img.icons8.com/bubbles/48/null/react.png"/> React Básico
+d# <img src="https://img.icons8.com/bubbles/48/null/react.png"/> React Básico
 
 ## :book: Temas:
 
@@ -84,6 +84,22 @@ Además de tener **Node.js** debemos tener **npm**, asi que también por consola
 - Tercero: creo la app con: ```npm create-react-app my-app``` para crear la primer app, **my-app** es el nombre de la aplicación.
 
 - Cuarto: entro a la carpeta ```cd my-app``` y corro mi proyecto con: ```npm start```.
+
+
+##### Estructura dle proyecto
+
+```
+>node_modules
+>public
+  index.html
+  favicon.ico
+>src
+.gitignore
+package.json
+package-lock.json
+```
+
+```>public``` -> ```index.html``` con el ```<div id="root></div>``` donde se va a renderizar toda la aplicación.
 
 ---
 
