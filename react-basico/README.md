@@ -86,7 +86,7 @@ Además de tener **Node.js** debemos tener **npm**, asi que también por consola
 - Cuarto: entro a la carpeta ```cd my-app``` y corro mi proyecto con: ```npm start```.
 
 
-##### Estructura dle proyecto
+##### Estructura del proyecto
 
 ```
 >node_modules
@@ -94,6 +94,8 @@ Además de tener **Node.js** debemos tener **npm**, asi que también por consola
   index.html
   favicon.ico
 >src
+  App.js
+  index.js
 .gitignore
 package.json
 package-lock.json
@@ -106,8 +108,61 @@ package-lock.json
  ## :star: 2 - Componentes y Eventos
  
  ### 2.1 - Componentes y componentes de presentación
+
+- Las aplicaciones en react se construyen mediante **componentes**. El potencial de este funcionamiento consiste en que podemso crear aplicaciones completas de manera **modular** y de fácil mantenimiento, a pesar de su complejidad.
+
+
+Ejemplos: navbar, cards, sliders, listados, footer, formularios, pop-up, titulos, texto, imagenes.
+
+- Los componentes permiten separar la **interfaz de usuario (UI)** es **piezas independientes**, **reutilizables** y pensar en cada pieza de forma aislada.
+
+- Al desarrollar crearemos componentes para **resolver pequeños problemas** que son fáciles de visualizar y comprender. Luego unos componentes se apoyarán en otro para solucionar problemas mayores y al final **la aplicación será un conjunto de componentes que trabajan entre sí**. Este modo de trabajo tiene varias ventajas, como la **facilidad de mantenieminto**, **depuración**, **escalabilidad**, etc.
+
+ - **Beneficios**:
+
+ -Favorece la separación de responsabiliades, cada componente debe tener una única tarea.
+
+ -Al tener la lógica dle estado y los elementos visuales por separado, es más fácil reutilizar los componentes.
+
+ -Se simplifica la tarea de hacer pruebas unitarias.
+
+ -Puede mejorar el rendimiento de la aplicación.
+
+ -La aplicación es más fácil de entender.
+
+ - En React existen dos maneras de entender los componentes, que varían según desde dónde nos paremos para analizarlo. Vamos a decir que existen **tipos de componentes** y **patrones**:
+
+ -**Componentes de clases**, los proyectos más viejos siguen usando componentes de clases.
+
+ -**Componentes funcionales** desde ES6 con arrow function, se pueden utilizar los **hooks** y **JSX** (JavaScript XML).
+
+ - **Componentes de presentación**: son aquellos que simplemente **Se limitan a mostrar los datos** y tienen poca a nula lógica asociada a manipulación del estado (por eso también son llamados **stateless components**). Un ejemplo son las cards.
+
+ Usando esta sintaxis **las propiedades se reciben como parámetros de la función** y podemos obtener las variables que nos interesan por separado. Ejemplo en código:
+
+ ```JSX
+const Titulo = ( (nombre) = props ) => {
+  <h1>nombre</h1>
+}
+
+const Item = ( props) => {
+  <li> <a href="#">{props.valor}</a></li>
+}
+
+const Input = (props) => {
+  <input type="text" placeholder={props.placeholder} />
+}
+ ```
  
  ### 2.2 - Componentes contenedores
+ 
+ - Tienen el propósito de **encapsular a otros componentes** y **proporcionarles las propiedades** que necesitan. Además se encargan de **modificar el estado** de la aplicación para que el usuario vea el cambio en los datos (por eso son también llamados **state components**). 
+ 
+ - Para leer:
+
+ [https://es.reactjs.org/docs/components-and-props.html](https://es.reactjs.org/docs/components-and-props.html)
+
+ [https://es.reactjs.org/docs/introducing-jsx.html](https://es.reactjs.org/docs/introducing-jsx.html)
  
  ### 2.3 - Eventos
 

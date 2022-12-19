@@ -31,10 +31,19 @@ Realicé dos cursos junto a **StarCoding** de **React**:
 
 ---
 
+## Prácticas
+
+
+En [**my-first-app**](https://github.com/eugenia1984/React-StarCoding/tree/main/my-first-app) está la primer práctica de React.
+
+---
+
 ## Por favor: 🎁
 
 - Comparte este proyecto con otros 📢
+
 - Invita una cerveza 🍺 o un café ☕ a alguien del equipo.
+
 - Muchas gracias 🤓.
 
 ---
