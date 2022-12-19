@@ -83,6 +83,7 @@ Además de tener **Node.js** debemos tener **npm**, asi que también por consola
 
 - Tercero: creo la app con: ```npm create-react-app my-app``` para crear la primer app, **my-app** es el nombre de la aplicación.
 
+- Cuarto: entro a la carpeta ```cd my-app``` y corro mi proyecto con: ```npm start```.
 
 ---
 
