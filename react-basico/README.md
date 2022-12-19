@@ -62,7 +62,7 @@ Es sí resulta ser todo lo que React hace con el Virtual DOM: **una representaci
 
 - ¿ Qué es **node.js**?
 
-Es un entonrno de ejecución de JavaScript que permite ser ejecutado en la computadora, fuera del navegador, gracias al motor v8.
+Es un entorno de ejecución de JavaScript que permite ser ejecutado en la computadora, fuera del navegador, gracias al motor v8.
 
 Con nodejs podemos **instalar módulos** y así utulizar las **librerías** con sus módulos adicionales, gracias a **npm** (**node package manager**).
 
@@ -74,6 +74,15 @@ Para asegurarnos de que tenemos Nodejs instalado, desde la consola: ``` node --v
 Además de tener **Node.js** debemos tener **npm**, asi que también por consola hacemos: ```npm --version```, si nos da el número de la versión es que se instaló bien.
 
 ### 1.3 - Creación de nuestra primer create-react-app
+
+[https://create-react-app.dev/](https://create-react-app.dev/)
+
+- Primero: me creo una carpeta donde voy a tener mi proyecto
+
+- Segundo: abro la terminal y me situo dentro de la carpeta.
+
+- Tercero: creo la app con: ```npm create-react-app my-app``` para crear la primer app, **my-app** es el nombre de la aplicación.
+
 
 ---
 
