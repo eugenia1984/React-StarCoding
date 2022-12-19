@@ -22,7 +22,41 @@
 
 ## :star: 1 - Introducción a React
 
+- Links de interés:
+
+•[https://es.reactjs.org/docs/faq-internals.html](https://es.reactjs.org/docs/faq-internals.html)
+
+•[https://nodejs.org/es/about/](https://nodejs.org/es/about/)
+
+•[https://damiandeluca.com.ar/como-usar-la-terminal-integrada-de-visual-studio-code](https://damiandeluca.com.ar/como-usar-la-terminal-integrada-de-visual-studio-code)
+
+•[https://desarrolloweb.com/articulos/que-es-una-spa.html](https://desarrolloweb.com/articulos/que-es-una-spa.html)
+
 ### 1.1 - Introducción a React
+
+- React JS fue creado por **Jordan Walke**, un ingeniero de software en **Facebook**(ahora Meta).
+
+- React intenta ayudar a los dearrolladores a **construir aplicaciones que usan datos que cambian todo el tiempop**. Su objetivo es ser **sencilla**, **declarativa** y **fácil de combinar**.
+
+- React JS es una **librería** de JavaScript, no es un framework (como si lo son Angular o vue).
+
+- ¿Cómo llega React a la **performance** que tanta fama le trae? Con tres conceptos: **Virtual DOM**, **React Fiber** y **Reconciliación**.
+
+El acceso indiscriminado al DOM (Document Object Model, el modelo de HTML basado en JavaScript) **es caro**, entonces se requirió encontrar una manera de realizarlo de la manera **más optima** posible.
+
+React detecta los **cambios** de los valores de los **componentes** y decide si es necesario **volver a renderizar** esa **UI** (no recarga nuevamente todo el DOm, toda la web).
+
+Para establecer esa seguridad, requiere que los datos y los cambios se provoquen de una manera específica con dos características...
+
+
+... **unidireciconalidad**, **de arriba hacia abajo**, las **props** (de compoennte padre a componente hijo) y los **Callbacks** (eventos, desde los componentes hijos hacia los padres)
+
+
+- ¿Qué es el **virtual DOM**?
+
+Es un patrón de comportamiento y React lo implmenta con una tecnología llamada **Fiber**.
+
+Es sí resulta ser todo lo que React hace con el Virtual DOM: **una representación virtual de la UI que se mantiene en memoria y en sincronía "reconciliando" con el DOM "real"**.
 
 ### 1.2 - Instalación de Nodejs
 
