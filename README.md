@@ -4,7 +4,16 @@
 
 Realicé dos cursos junto a **StarCoding** de **React**:
 
-- [**React Básico**](https://github.com/eugenia1984/React-StarCoding/tree/main/react-basico)
+- [**React Básico**](https://github.com/eugenia1984/React-StarCoding/tree/main/react-basico):
+
+1. Introduccion a React
+2. Componentes y Eventos
+3. Hooks
+4. Miscelaneos
+5. Apis
+6. Navegación
+7. El store(Redux)
+8. Forms
 
 - [**React Avanzado**](https://github.com/eugenia1984/React-StarCoding/tree/main/react-avanzado)
 
