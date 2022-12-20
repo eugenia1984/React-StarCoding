@@ -164,8 +164,30 @@ const Input = (props) => {
 
  [https://es.reactjs.org/docs/introducing-jsx.html](https://es.reactjs.org/docs/introducing-jsx.html)
  
- ### 2.3 - Eventos
+### 2.3 - Eventos
 
+La utilización de **eventos** se similar al HTML/JS normal, la única diferencia es que se usa **camelCase** para diferenciar el nombre dle evento, por ejemplo: **onClick**.
+
+
+Ejemplo en código:
+
+```JSX
+import REsct form "react";
+import "./style.css";
+
+export default function App() {
+  function handleClick(event) {
+    console.log("Clicked");
+    // al terminar esta funcion el evento se destruye
+  }
+
+  return(
+    <div>
+      <button onClick={handleClick}>Click Me</button>
+    </div>
+  );
+}
+```
 
  ---
 
