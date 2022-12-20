@@ -1,38 +1,43 @@
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 import CardComponent from "../components/CardComponent";
+import InfoBarComponent from "../components/InfoBarComponent";
 
 const ProductsContainer = () => {
-  let text = `Some quick example text to build on the card title and make up the bulk of the card's content.`;
-
   const [shoppingCart, setShoppingCart] = useState([]);
+  const [products, setProducts] = useState([]);
 
-  const addToShoppingCart = (event, name) => {
-    shoppingCart.push(name);
+  useEffect( async () => {
+    // para cuando se esta por montar el componente
+    // llamada a una APi que nos trae el JSON
+    const data = await fetch("https://api.mercadolibre.com/sites/MLA/search?q=zapatillas");
+    const response = await data.json();
+    
+    setProducts(response.results);
+
+    return () => {
+      // se esta por morir el componente
+      console.log("Se esta por morir el componente");
+    };
+  }, []);
+
+  const addToShoppingCart = (event, product) => {
+    shoppingCart.push(product);
     setShoppingCart([...shoppingCart]);
   };
 
   return (
     <div className="container">
-      <p>Items in the shopping cart: {shoppingCart.length}</p>
+      <InfoBarComponent shoppingCart={shoppingCart} />
       <div className="row">
-        <CardComponent
-          title="Producto 1"
-          src="https://picsum.photos/100/100/?grayscale&random=1"
-          text={text}
-          addToShoppingCart={addToShoppingCart}
-        />
-        <CardComponent
-          title="Producto 2"
-          src="https://picsum.photos/100/100/?grayscale&random=2"
-          text={text}
-          addToShoppingCart={addToShoppingCart}
-        />
-        <CardComponent
-          title="Producto 3"
-          src="https://picsum.photos/100/100/?grayscale&random=3"
-          text={text}
-          addToShoppingCart={addToShoppingCart}
-        />
+        {products.map((element) => {
+          return (
+            <CardComponent
+              key={element.id}
+              product={element}
+              addToShoppingCart={addToShoppingCart}
+            />
+          );
+        })}
       </div>
     </div>
   );
