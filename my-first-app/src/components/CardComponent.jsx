@@ -1,7 +1,4 @@
-const CardComponent = ({title, src, text }) => {
-  function handleClick() {
-    alert("Item added")
-  }
+const CardComponent = ({title, src, text, addToShoppingCart }) => {
 
   return (
     <div className="card col-4">
@@ -17,7 +14,7 @@ const CardComponent = ({title, src, text }) => {
         </p>
         <button 
           className="btn btn-primary"
-          onClick={handleClick}>
+          onClick={(event) => {addToShoppingCart(event, "product")}}>
           Add to Shopping Cart
         </button>
       </div>

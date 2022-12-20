@@ -178,6 +178,10 @@ Otra diferencia es que no hay que poner los **()**, sino apenas se carga el comp
 
 Si necesito enviar un parametro: ```onClick={(event)=> {myFunction(event, param)}}  ```
 
+Para tomar el valor, es con **event.target.value**.
+
+Nos ajudan a **settear estados**(set state).
+
 Ejemplo en código:
 
 ```JSX
@@ -204,9 +208,49 @@ export default function App() {
  
  ### 3.1 - Hooks
  
+ Todas las **constantes** o **Variables** que declare para intentar mantener el **estado** morirán y serán reiniciadas en cada **render**.
+
+ LOs **hooks** agarran esa información, la guardan en el estado, y esos valores son dinímicos, al modificarse, ejecutan una función y vuelven a renderizar el componente.
+
+ Ejemplo en código:
+
+ ```JSX
+import React, {Component, useState } from "react";
+import { render } from "react-dom";
+import Hello from "./Hello";
+
+function FnApp() {
+  const [ name, setName ] = useState("React class");
+
+  return(
+    <div onClick={/() => setname("React Function")}>
+      <Hello name={name} />
+    </div>
+  );
+}
+```
+
  ### 3.2 - ¿Qué son los hooks?
 
- ---
+- **useState** es un hook para manejar el **state**(estado) de un componente.
+
+Para poder utilizarlo hay que **importarlo**: ```import {useState} from "react";```
+
+```JSX
+const [ name, setName ] = useState("Valor inicial");
+```
+
+devuelve un array:
+
+[0] => valor(ref)
+
+[1] => setName(fn)
+
+Debe ejecutarse **siempre**. No pueden ser ejecutados dentro de otras estructuras como if, for u operador ternario. Se ejecutan en orden y nunca en simultáneo.
+
+En el componente padre puedo pasar como prop la función que me va a actualizar el estado, asi tengo la logica en el componente padre y no en el hijo, el hijo recibe la función como prop y va a poder ejecutarla en el evento sintético. Utilizamos una función callback.
+
+---
 
 ## :star: 4. Miscelaneos
 
