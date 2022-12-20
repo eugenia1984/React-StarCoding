@@ -1,4 +1,8 @@
-const CardComponent = ({title, src, text, price }) => {
+const CardComponent = ({title, src, text }) => {
+  function handleClick() {
+    alert("Item added")
+  }
+
   return (
     <div className="card col-4">
       <img
@@ -11,9 +15,11 @@ const CardComponent = ({title, src, text, price }) => {
         <p className="card-text">
           { text }
         </p>
-        <a href="/" className="btn btn-primary">
-          $ {price}
-        </a>
+        <button 
+          className="btn btn-primary"
+          onClick={handleClick}>
+          Add to Shopping Cart
+        </button>
       </div>
     </div>
   );

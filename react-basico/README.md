@@ -174,11 +174,14 @@ const Input = (props) => {
 
 La utilización de **eventos** se similar al HTML/JS normal, la única diferencia es que se usa **camelCase** para diferenciar el nombre dle evento, por ejemplo: **onClick**.
 
+Otra diferencia es que no hay que poner los **()**, sino apenas se carga el componente se llama a la función y no solo si se hace click.
+
+Si necesito enviar un parametro: ```onClick={(event)=> {myFunction(event, param)}}  ```
 
 Ejemplo en código:
 
 ```JSX
-import REsct form "react";
+import React form "react";
 import "./style.css";
 
 export default function App() {
@@ -199,9 +202,9 @@ export default function App() {
 
  ## :star: 3 - Hooks
  
- ### 3.1 - hooks
+ ### 3.1 - Hooks
  
- ### 3.2 - ¿qué son los hooks?
+ ### 3.2 - ¿Qué son los hooks?
 
  ---
 
