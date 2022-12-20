@@ -154,10 +154,16 @@ const Input = (props) => {
 }
  ```
  
+ 
+ ![image](https://user-images.githubusercontent.com/72580574/208733287-e1e1fec9-877f-48db-b930-6d7895f50158.png)
+
+ 
  ### 2.2 - Componentes contenedores
  
  - Tienen el propósito de **encapsular a otros componentes** y **proporcionarles las propiedades** que necesitan. Además se encargan de **modificar el estado** de la aplicación para que el usuario vea el cambio en los datos (por eso son también llamados **state components**). 
  
+ ![image](https://user-images.githubusercontent.com/72580574/208733213-cb0caf2e-767a-4afd-9eb5-7f70d0ceab75.png)
+
  - Para leer:
 
  [https://es.reactjs.org/docs/components-and-props.html](https://es.reactjs.org/docs/components-and-props.html)
