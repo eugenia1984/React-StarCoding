@@ -18,7 +18,9 @@ export const EcommerceProvider = ({ children }) => {
   }, []);
 
   return (
-    <EcommerceContext.Provider value={{ products }}>
+    <EcommerceContext.Provider
+      value={{ products, shoppingCart, setShoppingCart }}
+    >
       {children}
     </EcommerceContext.Provider>
   );

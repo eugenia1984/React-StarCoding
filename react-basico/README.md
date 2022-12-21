@@ -454,6 +454,7 @@ export const EcommerceProvider = ({ children }) => {
   );
 };
 ```
+
 Y mi **componente consumer**:
 
 ```JSX
@@ -477,6 +478,7 @@ export default App;
 Y gracias a los **children** todos los componentes hijos van a tener a dispocisión el listado de productos.
 
 Ahora en **ProductsContainer** tengo que aplicar el hook **useContext**:
+
 ```JSX
 const { products } = useContext(EcommerceContext);
 ```
@@ -501,16 +503,18 @@ inicio -> búsquedas -> detalle -> confirmación -> fin
 
 Esta es la página: [https://reactrouter.com/en/main](https://reactrouter.com/en/main), hay que ver porque tneemos proyecto en la versión % y otros con la versión 6, y hay diferencia entre ambas.
 
-```npm install react-router-dom```
+`npm install react-router-dom`
 
 -> En el video lo hacen con la ersión 5, yo implemento la 6.
 
 1. En **index.js** me importo **BrowserRouter** para poder utilizarlo:
+
 ```JSX
 import { BrowserRouter } from "react-router-dom";
 ```
 
-2. En vuelvo mi ```<App />``` en el **BrowserRouter** :
+2. En vuelvo mi `<App />` en el **BrowserRouter** :
+
 ```JSX
   <BrowserRouter>
       <App />
@@ -518,6 +522,7 @@ import { BrowserRouter } from "react-router-dom";
 ```
 
 3. En **App.js** voy a armar todoas mis rutas, para lo cual necesito importarlas:
+
 ```JSX
 import { Routes, Route } from "react-router-dom";
 ```
@@ -528,20 +533,36 @@ import { Routes, Route } from "react-router-dom";
 function App() {
   return (
     <div className="App my-5 mx-2">
-      <Routes>
-        <EcommerceProvider>
-          <ProductsContainer />
-        </EcommerceProvider>
-      </Routes>
+      <EcommerceProvider>
+        <Routes>
+          <Route path="/" element={<ProductsContainer />} />
+        </Routes>
+      </EcommerceProvider>
     </div>
   );
 }
 ```
 
+En `<Route />` siempre voy a tener el **path** y el **element** (que componentes se van a renderizar).
+
+En la versión 5 Al **Routes** se le llama **Switch**
+
+EL **EcommerceProvider** lo paso afuera de **Routes** asi esta disponible para todas las rutas.
 
 ### 6.2 - Navegación entre componentes
 
+Armar el **routing** de la aplicación, acorde a la tuta en la que estamos, voy a renderizar distintos componentes.
+
 ### 6.3 - Rutas dinámicas
+
+Para recibir ese parámetro desde el componente, lo que haremos será usar un hook: **useParams**, lo podemos utilizar para leer en JavaScript los parámetros de la ruta y en combinación con un useEffect nos sirve para obtener actualizaciones sobre los parámetros.
+
+Vamos a mandar **Variables** a través de la URL para poder hacer la búsqueda. Ya en *ProductsContainer** tenemos un listado de productos que viene de **EcommerceContext** , donde hacemos el **fetch** a la PAI de Mercado Libre con **https://api.mercadolibre.com/sites/MLA/search?q=zapatillas**, donde justamente ```q=zapatillas``` es el parámetro de busqueda para traer solo las zapatillas.
+
+Entonces en **App** agregamos la URL para tener esta búsqueda dinímica con el pa´rametro:
+```JSX
+<Route path="/productos/:busqueda" element={<ProductsContainer />} />
+```
 
 ### 6.4 - Rutas dinámicas y contenido
 

@@ -11,3 +11,7 @@ export const INFO_BAR = {
 export const PRODUCTS = {
   loading: "Cargando los productos...",
 };
+
+export const HOME_MESSAGE = {
+  txt: "Hola, en tu carrito hay : "
+}

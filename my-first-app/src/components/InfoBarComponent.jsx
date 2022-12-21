@@ -1,11 +1,10 @@
 import React from "react";
-import { INFO_BAR } from "../international";
 
-const InfoBarComponent = ({ shoppingCart }) => {
+const InfoBarComponent = ({ shoppingCart, text }) => {
   return (
     <div className="bg-white py-4">
       <p>
-        {INFO_BAR.text} {shoppingCart.length}
+        {text} {shoppingCart.length}
       </p>
     </div>
   );

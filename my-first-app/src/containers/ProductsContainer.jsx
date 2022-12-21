@@ -3,7 +3,9 @@ import CardComponent from "../components/CardComponent";
 import InfoBarComponent from "../components/InfoBarComponent";
 import Loader from "../components/Loader";
 import { EcommerceContext } from "../context/EcommerceContext";
+
 import { PRODUCTS } from "../international";
+import { INFO_BAR } from "../international";
 
 const ProductsContainer = () => {
   const [shoppingCart, setShoppingCart] = useState([]);
@@ -21,13 +23,11 @@ const ProductsContainer = () => {
 
   return (
     <div className="container">
-      <InfoBarComponent shoppingCart={shoppingCart} />
+      <InfoBarComponent shoppingCart={shoppingCart} text={INFO_BAR.text} />
       <div className="row">
-        {products.length === 0 ? 
-        (
+        {products.length === 0 ? (
           <Loader text={PRODUCTS.loading} />
-        ) : 
-        (
+        ) : (
           products.map((element) => {
             return (
               <CardComponent
