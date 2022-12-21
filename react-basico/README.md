@@ -419,6 +419,9 @@ Lo importante al configurar esta estrategia será:
 
 - **Cobinarlo** estratégicamente con un **useState** para poder **mutarlo** y que el useState me ayude a hacer **trigger de renderings** en **consumers**.
 
+![image](https://user-images.githubusercontent.com/72580574/208946931-42c5f82c-bd50-42e0-97a0-4522f842fe56.png)
+
+
 ---
 
 ## :star: 6 - Navegación
