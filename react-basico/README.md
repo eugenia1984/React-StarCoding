@@ -404,6 +404,8 @@ El **useEffect** con el llamado queda asi:
 
 Dado que React funciona con un flujo de datos **unidireccional** (**hay una sola fuente de verdad**), la única manera de transmitir datos es vía **props** (de componente padre a componente hijo)
 
+![image](https://user-images.githubusercontent.com/72580574/208936723-8f7f81ec-38db-46e3-91e0-2c4e70a5a3bf.png)
+
 ---
 
 ## :star: 6 - Navegación
