@@ -396,6 +396,8 @@ El **useEffect** con el llamado queda asi:
 
 ### 5.2 - Context
 
+Dado que React funciona con un flujo de datos **unidireccional** (**hay una sola fuente de verdad**), la única manera de transmitir datos es vía **props** (de componente padre a componente hijo)
+
 ---
 
 ## :star: 6 - Navegación
