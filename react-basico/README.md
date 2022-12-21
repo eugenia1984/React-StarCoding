@@ -500,6 +500,45 @@ inicio -> búsquedas -> detalle -> confirmación -> fin
 - Por defecto React no viene con un mecanismo integrado de navegación. Esto es para mantener sus dependencias al **mínimo** y dado que **no todo proyecto necesita routing**, se maneja como una dependencia aparte. Hay varias soluciones, vamos a trabajar con [react-router-dom](https://www.npmjs.com/package/react-router-dom)
 
 Esta es la página: [https://reactrouter.com/en/main](https://reactrouter.com/en/main), hay que ver porque tneemos proyecto en la versión % y otros con la versión 6, y hay diferencia entre ambas.
+
+```npm install react-router-dom```
+
+-> En el video lo hacen con la ersión 5, yo implemento la 6.
+
+1. En **index.js** me importo **BrowserRouter** para poder utilizarlo:
+```JSX
+import { BrowserRouter } from "react-router-dom";
+```
+
+2. En vuelvo mi ```<App />``` en el **BrowserRouter** :
+```JSX
+  <BrowserRouter>
+      <App />
+  </BrowserRouter>
+```
+
+3. En **App.js** voy a armar todoas mis rutas, para lo cual necesito importarlas:
+```JSX
+import { Routes, Route } from "react-router-dom";
+```
+
+4. Y encierro mi **App** entre las **Routes** para luego adentro mediante **Route** voy a ir definiendo que componentes renderizar acorde al path de la URL de mi app.
+
+```JSX
+function App() {
+  return (
+    <div className="App my-5 mx-2">
+      <Routes>
+        <EcommerceProvider>
+          <ProductsContainer />
+        </EcommerceProvider>
+      </Routes>
+    </div>
+  );
+}
+```
+
+
 ### 6.2 - Navegación entre componentes
 
 ### 6.3 - Rutas dinámicas

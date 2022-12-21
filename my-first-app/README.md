@@ -2,15 +2,27 @@
 
 Primer práctica del curso **React Básico** junto a **Star Coding**.
 
+---
+
 ## ¿ Qué dependencias tengo ?
 
-- **bootstrap**, version 5.2.3
+- **bootstrap**, version 5.2.3, para darle estilos.
 
 - **react**, versión 18.2.0
 
 - **react-dom**, versión 18.2.0
 
 - **react-scripts**, versión 5.0.1
+
+- **react-router-dom**, versión 6.6.0, para el maneja de las rutas dentro de la aplicación.
+
+---
+
+## ¿ De qué es la app?
+
+Un mini e-commerce, para practicar con React: componentes de presentación, componentes contenedores, eventos, hooks (useState, useEffect, useContext), renderizado condicional, consumir APIs, context, routing.
+
+Se hacen consultas a la [API de Mercado Libre](https://api.mercadolibre.com/sites/MLA) renderizo productos.
 
 ---
 
