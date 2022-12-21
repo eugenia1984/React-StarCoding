@@ -417,9 +417,11 @@ Lo importante al configurar esta estrategia será:
 
 - Saber **elegir** cuál es el **punto estratégico** de mmi apllicación donde iniciaré el **estado** de ese **context**.
 
-- **Cobinarlo** estratégicamente con un **useState** para poder **mutarlo** y que el useState me ayude a hacer **trigger de renderings** en **consumers**.
+- **Combinarlo** estratégicamente con un **useState** para poder **mutarlo** y que el useState me ayude a hacer **trigger de renderings** en **consumers**.
 
-![image](https://user-images.githubusercontent.com/72580574/208946931-42c5f82c-bd50-42e0-97a0-4522f842fe56.png)
+- Ejemplo en codigo: **CacheContext** es la variable que se encarga de mantener todos los valores globales en la aplicación:
+
+![image](https://user-images.githubusercontent.com/72580574/208947355-95aba572-17b0-4c9e-a529-6b4c1dea4276.png)
 
 
 ---
