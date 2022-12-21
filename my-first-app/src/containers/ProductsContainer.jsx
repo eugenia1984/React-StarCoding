@@ -1,7 +1,9 @@
 import React, { useContext, useEffect, useState } from "react";
 import CardComponent from "../components/CardComponent";
 import InfoBarComponent from "../components/InfoBarComponent";
+import Loader from "../components/Loader";
 import { EcommerceContext } from "../context/EcommerceContext";
+import { PRODUCTS } from "../international";
 
 const ProductsContainer = () => {
   const [shoppingCart, setShoppingCart] = useState([]);
@@ -21,9 +23,11 @@ const ProductsContainer = () => {
     <div className="container">
       <InfoBarComponent shoppingCart={shoppingCart} />
       <div className="row">
-        {products.length === 0 ? (
-          <p>Cargando los productos...</p>
-        ) : (
+        {products.length === 0 ? 
+        (
+          <Loader text={PRODUCTS.loading} />
+        ) : 
+        (
           products.map((element) => {
             return (
               <CardComponent

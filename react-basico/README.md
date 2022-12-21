@@ -489,6 +489,17 @@ const { products } = useContext(EcommerceContext);
 
 ### 6.1 - Routing
 
+- ¿Cuál es el punto de inicipio de nuestra aplicación?
+
+Un ejemplo: Login -> Home
+
+- ¿Cómo vamos a organizarlo?
+
+inicio -> búsquedas -> detalle -> confirmación -> fin
+
+- Por defecto React no viene con un mecanismo integrado de navegación. Esto es para mantener sus dependencias al **mínimo** y dado que **no todo proyecto necesita routing**, se maneja como una dependencia aparte. Hay varias soluciones, vamos a trabajar con [react-router-dom](https://www.npmjs.com/package/react-router-dom)
+
+Esta es la página: [https://reactrouter.com/en/main](https://reactrouter.com/en/main), hay que ver porque tneemos proyecto en la versión % y otros con la versión 6, y hay diferencia entre ambas.
 ### 6.2 - Navegación entre componentes
 
 ### 6.3 - Rutas dinámicas

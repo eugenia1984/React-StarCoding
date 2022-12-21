@@ -5,11 +5,10 @@ export const EcommerceContext = createContext();
 export const EcommerceProvider = ({ children }) => {
   const [shoppingCart, setShoppingCart] = useState([]);
   const [products, setProducts] = useState([]);
+  const URL = "https://api.mercadolibre.com/sites/MLA/search?q=zapatillas";
 
   const fetchData = async () => {
-    const data = await fetch(
-      "https://api.mercadolibre.com/sites/MLA/search?q=zapatillas"
-    );
+    const data = await fetch(URL);
     const result = await data.json();
     setProducts(result.results);
   };

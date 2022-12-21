@@ -1,9 +1,12 @@
 import React from "react";
+import { INFO_BAR } from "../international";
 
 const InfoBarComponent = ({ shoppingCart }) => {
   return (
     <div className="bg-white py-4">
-      <p>Productos seleccionados: {shoppingCart.length}</p>
+      <p>
+        {INFO_BAR.text} {shoppingCart.length}
+      </p>
     </div>
   );
 };
