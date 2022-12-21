@@ -406,6 +406,19 @@ Dado que React funciona con un flujo de datos **unidireccional** (**hay una sola
 
 ![image](https://user-images.githubusercontent.com/72580574/208936723-8f7f81ec-38db-46e3-91e0-2c4e70a5a3bf.png)
 
+
+Los **contextos** también pueden ser alterados en **tiempo de ejecución** y sus efectos **propagados** al resto de los **consumidores**(**consumer**).
+
+contexto -> guarda información global de la app, asi no hay que pasarla por props entre el componente bisabuelo / abuelo / padre / hijo.
+
+Creamos un **contexto** que va a ser el **proveedor**(**provider**) de la información.
+
+Lo importante al configurar esta estrategia será:
+
+- Saber **elegir** cuál es el **punto estratégico** de mmi apllicación donde iniciaré el **estado** de ese **context**.
+
+- **Cobinarlo** estratégicamente con un **useState** para poder **mutarlo** y que el useState me ayude a hacer **trigger de renderings** en **consumers**.
+
 ---
 
 ## :star: 6 - Navegación
