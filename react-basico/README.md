@@ -394,6 +394,12 @@ El **useEffect** con el llamado queda asi:
   }, []);
 ```
 
+
+#### Así va quedando:
+
+![image](https://user-images.githubusercontent.com/72580574/208918386-7975d601-4e53-4b78-a533-819984097798.png)
+
+
 ### 5.2 - Context
 
 Dado que React funciona con un flujo de datos **unidireccional** (**hay una sola fuente de verdad**), la única manera de transmitir datos es vía **props** (de componente padre a componente hijo)
