@@ -571,6 +571,20 @@ Entonces en **App** agregamos la URL para tener esta búsqueda dinímica con el 
 <Route path="/productos/:busqueda" element={<ProductsContainer />} />
 ```
 
+En **ProductsContainer** voy a importar 
+```JSX
+import { useParams } from "react-router-dom";
+```
+
+Para poder usarlo guardandolo en una oonstante:
+```JSX
+const { search } = useParams();
+```
+
+-> Si tengo una **ruta dinamica** el parametro siempre va con **:** adelante (lo que indica es dinamico, es una variable).
+
+
+
 ### 6.4 - Rutas dinámicas y contenido
 
 ---

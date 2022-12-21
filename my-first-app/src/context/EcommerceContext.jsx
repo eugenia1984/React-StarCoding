@@ -1,25 +1,20 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useState } from "react";
 
 export const EcommerceContext = createContext();
 
 export const EcommerceProvider = ({ children }) => {
   const [shoppingCart, setShoppingCart] = useState([]);
   const [products, setProducts] = useState([]);
-  const URL = "https://api.mercadolibre.com/sites/MLA/search?q=zapatillas";
 
-  const fetchData = async () => {
-    const data = await fetch(URL);
+  const fetchData = async (searchQuery) => {
+    const data = await fetch(`https://api.mercadolibre.com/sites/MLA/search?q=${searchQuery}`);
     const result = await data.json();
     setProducts(result.results);
   };
 
-  useEffect(() => {
-    fetchData().catch(console.error);
-  }, []);
-
   return (
     <EcommerceContext.Provider
-      value={{ products, shoppingCart, setShoppingCart }}
+      value={{ products, shoppingCart, setShoppingCart, fetchData }}
     >
       {children}
     </EcommerceContext.Provider>

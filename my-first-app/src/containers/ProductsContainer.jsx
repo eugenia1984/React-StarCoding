@@ -1,4 +1,5 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import CardComponent from "../components/CardComponent";
 import InfoBarComponent from "../components/InfoBarComponent";
 import Loader from "../components/Loader";
@@ -8,13 +9,14 @@ import { PRODUCTS } from "../international";
 import { INFO_BAR } from "../international";
 
 const ProductsContainer = () => {
-  const [shoppingCart, setShoppingCart] = useState([]);
-  const { products } = useContext(EcommerceContext);
+  const { products, shoppingCart, setShoppingCart, fetchData } =
+    useContext(EcommerceContext);
+  const { search } = useParams();
 
   useEffect(() => {
-    return () =>
-      console.info("Se esta por morir el componente ProductsContainer");
-  }, []);
+    fetchData(search).catch(console.error);
+    return () => {};
+  }, [search]);
 
   const addToShoppingCart = (event, product) => {
     shoppingCart.push(product);
