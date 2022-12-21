@@ -349,7 +349,7 @@ En vez de un **forEach** utilizamos un **map()**, que nos va a retornar lo que e
 
 - con request **ajax**
 
-- con ***axios**
+- con **\*axios**
 
 - Con **fetch()** que nos devuelve la promesa(por eso se usa el **.then()**), ejemplo en código:
 
@@ -365,8 +365,7 @@ fetch("https://api.ejemplo/id/1202")
 
 Se puede usar del modo asíncrono con **Async** - **await**.
 
-- Para este  mini e-commerce vamos a utilizar la API de Mercado Libre: [https://api.mercadolibre.com/sites/MLA/search](https://api.mercadolibre.com/sites/MLA/search)
-
+- Para este mini e-commerce vamos a utilizar la API de Mercado Libre: [https://api.mercadolibre.com/sites/MLA/search](https://api.mercadolibre.com/sites/MLA/search)
 
 En la documentación están las opciones, nosotros vamos a usar:
 
@@ -389,23 +388,20 @@ El **useEffect** con el llamado queda asi:
     }
     fetchData()
       .catch(console.error);
-    // return para cerrar el llamado a la API 
+    // return para cerrar el llamado a la API
     return () => console.log("Se esta por morir el componente");
   }, []);
 ```
 
-
 #### Así va quedando:
 
 ![image](https://user-images.githubusercontent.com/72580574/208918386-7975d601-4e53-4b78-a533-819984097798.png)
-
 
 ### 5.2 - Context
 
 Dado que React funciona con un flujo de datos **unidireccional** (**hay una sola fuente de verdad**), la única manera de transmitir datos es vía **props** (de componente padre a componente hijo)
 
 ![image](https://user-images.githubusercontent.com/72580574/208936723-8f7f81ec-38db-46e3-91e0-2c4e70a5a3bf.png)
-
 
 Los **contextos** también pueden ser alterados en **tiempo de ejecución** y sus efectos **propagados** al resto de los **consumidores**(**consumer**).
 
@@ -423,11 +419,69 @@ Lo importante al configurar esta estrategia será:
 
 ![image](https://user-images.githubusercontent.com/72580574/208947355-95aba572-17b0-4c9e-a529-6b4c1dea4276.png)
 
-
+- Como vemos en **ComponentA2**, par apoder usar la información del **context**, tenemos que usar el **hook** de **useContext(nombreDelContext)**.
 
 ![image](https://user-images.githubusercontent.com/72580574/208948177-cbe813f3-0945-423d-b2a7-ab9060088192.png)
 
+-> En nuestro proyecto creamos : **context** > **EcommerceContext.jsx**:
 
+Entonces mi **componente provider**:
+
+```JSX
+import { createContext, useEffect, useState } from "react";
+
+export const EcommerceContext = createContext();
+
+export const EcommerceProvider = ({ children }) => {
+  const [products, setProducts] = useState([]);
+
+  const fetchData = async () => {
+    const data = await fetch(
+      "https://api.mercadolibre.com/sites/MLA/search?q=zapatillas"
+    );
+    const result = await data.json();
+    setProducts(result.results);
+  };
+
+  useEffect(() => {
+    fetchData().catch(console.error);
+  }, []);
+
+  return (
+    <EcommerceContext.Provider value={{ products }}>
+      {children}
+    </EcommerceContext.Provider>
+  );
+};
+```
+Y mi **componente consumer**:
+
+```JSX
+import "./App.css";
+import ProductsContainer from "./containers/ProductsContainer";
+import { EcommerceProvider } from "./context/EcommerceContext";
+
+function App() {
+  return (
+    <div className="App my-5 mx-2">
+      <EcommerceProvider>
+        <ProductsContainer />
+      </EcommerceProvider>
+    </div>
+  );
+}
+
+export default App;
+```
+
+Y gracias a los **children** todos los componentes hijos van a tener a dispocisión el listado de productos.
+
+Ahora en **ProductsContainer** tengo que aplicar el hook **useContext**:
+```JSX
+const { products } = useContext(EcommerceContext);
+```
+
+:tv: -> Para leer [https://es.reactjs.org/docs/context.html](https://es.reactjs.org/docs/context.html)
 
 ---
 

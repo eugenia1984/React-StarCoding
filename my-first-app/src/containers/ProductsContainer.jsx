@@ -1,30 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import CardComponent from "../components/CardComponent";
 import InfoBarComponent from "../components/InfoBarComponent";
+import { EcommerceContext } from "../context/EcommerceContext";
 
 const ProductsContainer = () => {
   const [shoppingCart, setShoppingCart] = useState([]);
-  const [products, setProducts] = useState([]);
+  const { products } = useContext(EcommerceContext);
 
-  // para cuando se esta por montar el componente
   useEffect(() => {
-    
-    const fetchData = async () => {
-      // llamada a una APi que nos trae el JSON
-      const data = await fetch(
-        "https://api.mercadolibre.com/sites/MLA/search?q=zapatillas"
-      );
-      // la paso a JSON
-      const json = await data.json();
-  
-      setProducts(json.results);
-    }
-
-    fetchData()
-      .catch(console.error);
-    
-     // return para cerrar el llamado a la API 
-    return () => console.log("Se esta por morir el componente");
+    return () =>
+      console.info("Se esta por morir el componente ProductsContainer");
   }, []);
 
   const addToShoppingCart = (event, product) => {
@@ -36,15 +21,19 @@ const ProductsContainer = () => {
     <div className="container">
       <InfoBarComponent shoppingCart={shoppingCart} />
       <div className="row">
-        {products.map((element) => {
-          return (
-            <CardComponent
-              key={element.id}
-              product={element}
-              addToShoppingCart={addToShoppingCart}
-            />
-          );
-        })}
+        {products.length === 0 ? (
+          <p>Cargando los productos...</p>
+        ) : (
+          products.map((element) => {
+            return (
+              <CardComponent
+                key={element.id}
+                product={element}
+                addToShoppingCart={addToShoppingCart}
+              />
+            );
+          })
+        )}
       </div>
     </div>
   );

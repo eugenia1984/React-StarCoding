@@ -10,14 +10,16 @@ const CardComponent = ({ product, addToShoppingCart }) => {
       />
       <div className="card-body">
         <h5 className="card-title">{product.title}</h5>
-        <p className="card-text"><strong>Precio: $ {product.price}</strong></p>
+        <p className="card-text">
+          <strong>Precio: $ {product.price}</strong>
+        </p>
         <button
           className="btn btn-primary"
           onClick={(event) => {
             addToShoppingCart(event, product);
           }}
         >
-          Add to Shopping Cart
+          Agregar
         </button>
       </div>
     </div>

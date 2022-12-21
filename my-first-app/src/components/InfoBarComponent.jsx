@@ -3,7 +3,7 @@ import React from "react";
 const InfoBarComponent = ({ shoppingCart }) => {
   return (
     <div className="bg-white py-4">
-      <p>Items in the shopping cart: {shoppingCart.length}</p>
+      <p>Productos seleccionados: {shoppingCart.length}</p>
     </div>
   );
 };
