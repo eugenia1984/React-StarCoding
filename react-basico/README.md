@@ -1,4 +1,4 @@
-d# <img src="https://img.icons8.com/bubbles/48/null/react.png"/> React Básico
+# <img src="https://img.icons8.com/bubbles/48/null/react.png"/> React Básico
 
 ## :book: Temas:
 
@@ -203,7 +203,7 @@ export default function App() {
 
 Todas las **constantes** o **Variables** que declare para intentar mantener el **estado** morirán y serán reiniciadas en cada **render**.
 
-LOs **hooks** agarran esa información, la guardan en el estado, y esos valores son dinímicos, al modificarse, ejecutan una función y vuelven a renderizar el componente.
+Los **hooks** agarran esa información, la guardan en el estado, y esos valores son dinímicos, al modificarse, ejecutan una función y vuelven a renderizar el componente.
 
 Ejemplo en código:
 
@@ -373,6 +373,26 @@ En la documentación están las opciones, nosotros vamos a usar:
 Realiza una búsqueda por texto de busqueda:
 
 GET: /sites/MLA/search?q=
+
+El **useEffect** con el llamado queda asi:
+
+```JSX
+ // para cuando se esta por montar el componente
+  useEffect(() => {
+    const fetchData = async () => {
+      // llamada a una APi que nos trae el JSON
+      const data = await fetch(
+        "https://api.mercadolibre.com/sites/MLA/search?q=zapatillas"
+      );
+      const json = await data.json(); // la paso a JSON
+      setProducts(json.results); // seteo el estado
+    }
+    fetchData()
+      .catch(console.error);
+    // return para cerrar el llamado a la API 
+    return () => console.log("Se esta por morir el componente");
+  }, []);
+```
 
 ### 5.2 - Context
 

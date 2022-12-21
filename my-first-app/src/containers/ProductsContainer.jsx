@@ -6,18 +6,25 @@ const ProductsContainer = () => {
   const [shoppingCart, setShoppingCart] = useState([]);
   const [products, setProducts] = useState([]);
 
-  useEffect( async () => {
-    // para cuando se esta por montar el componente
-    // llamada a una APi que nos trae el JSON
-    const data = await fetch("https://api.mercadolibre.com/sites/MLA/search?q=zapatillas");
-    const response = await data.json();
+  // para cuando se esta por montar el componente
+  useEffect(() => {
     
-    setProducts(response.results);
+    const fetchData = async () => {
+      // llamada a una APi que nos trae el JSON
+      const data = await fetch(
+        "https://api.mercadolibre.com/sites/MLA/search?q=zapatillas"
+      );
+      // la paso a JSON
+      const json = await data.json();
+  
+      setProducts(json.results);
+    }
 
-    return () => {
-      // se esta por morir el componente
-      console.log("Se esta por morir el componente");
-    };
+    fetchData()
+      .catch(console.error);
+    
+     // return para cerrar el llamado a la API 
+    return () => console.log("Se esta por morir el componente");
   }, []);
 
   const addToShoppingCart = (event, product) => {

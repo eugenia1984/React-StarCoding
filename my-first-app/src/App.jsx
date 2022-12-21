@@ -3,7 +3,7 @@ import ProductsContainer from "./containers/ProductsContainer";
 
 function App() {
   return (
-    <div className="App my-5">
+    <div className="App my-5 mx-2">
       <ProductsContainer />
     </div>
   );
