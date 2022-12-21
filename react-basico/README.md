@@ -549,6 +549,13 @@ En la versión 5 Al **Routes** se le llama **Switch**
 
 EL **EcommerceProvider** lo paso afuera de **Routes** asi esta disponible para todas las rutas.
 
+-> Como en el video trabajan con la versión 5:
+
+![image](https://user-images.githubusercontent.com/72580574/208983575-89bd8924-3def-46f0-89b2-a83baa23b8dc.png)
+
+
+
+
 ### 6.2 - Navegación entre componentes
 
 Armar el **routing** de la aplicación, acorde a la tuta en la que estamos, voy a renderizar distintos componentes.
