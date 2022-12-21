@@ -539,6 +539,13 @@ function App() {
 ```
 
 
+-> Como en el video trabajan con la versión 5:
+
+![image](https://user-images.githubusercontent.com/72580574/208983575-89bd8924-3def-46f0-89b2-a83baa23b8dc.png)
+
+
+
+
 ### 6.2 - Navegación entre componentes
 
 ### 6.3 - Rutas dinámicas
