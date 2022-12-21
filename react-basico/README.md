@@ -424,6 +424,11 @@ Lo importante al configurar esta estrategia será:
 ![image](https://user-images.githubusercontent.com/72580574/208947355-95aba572-17b0-4c9e-a529-6b4c1dea4276.png)
 
 
+
+![image](https://user-images.githubusercontent.com/72580574/208948177-cbe813f3-0945-423d-b2a7-ab9060088192.png)
+
+
+
 ---
 
 ## :star: 6 - Navegación
