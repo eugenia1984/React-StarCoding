@@ -1,6 +1,6 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import CardComponent from "../components/CardComponent";
+import CardComponent from "../components/card/CardComponent";
 import InfoBarComponent from "../components/InfoBarComponent";
 import Loader from "../components/Loader";
 import { EcommerceContext } from "../context/EcommerceContext";
@@ -9,7 +9,9 @@ import { PRODUCTS } from "../international";
 import { INFO_BAR } from "../international";
 
 const ProductsContainer = () => {
-  const { products, shoppingCart, setShoppingCart, fetchData } =
+  const [searchTerm, setSearchTerm] = useState();
+
+  const { products, shoppingCart, setShoppingCart, setProducts, fetchData } =
     useContext(EcommerceContext);
   const { search } = useParams();
 
@@ -23,9 +25,24 @@ const ProductsContainer = () => {
     setShoppingCart([...shoppingCart]);
   };
 
+  const handleKeyUp = (e) => {
+    setSearchTerm(e.target.value);
+    const productsFilter = products.filter((element) => {
+      if (element.title.toUpperCase().match(e.target.value.toUpperCase())) {
+        return true;
+      }
+      return false;
+    });
+    setProducts(productsFilter);
+  };
+
   return (
     <div className="container">
-      <InfoBarComponent shoppingCart={shoppingCart} text={INFO_BAR.text} />
+      <InfoBarComponent
+        shoppingCart={shoppingCart}
+        text={INFO_BAR.text}
+        handleKeyUp={handleKeyUp}
+      />
       <div className="row">
         {products.length === 0 ? (
           <Loader text={PRODUCTS.loading} />

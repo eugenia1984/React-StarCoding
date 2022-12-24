@@ -1,0 +1,15 @@
+.shopping-card {
+  padding-left: 0px;
+  padding-right: 0px;
+  min-height: 480px;
+  margin-bottom: 12px;
+}
+
+.card-title {
+  min-height: 140px;
+}
+
+.card-image {
+  min-height: 240px;
+  object-fit: cover;
+}

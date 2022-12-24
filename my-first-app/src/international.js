@@ -15,3 +15,14 @@ export const PRODUCTS = {
 export const HOME_MESSAGE = {
   txt: "Hola, en tu carrito hay : "
 }
+
+export const NAVBAR = [
+  {
+    to: "/",
+    text: "Home"
+  },
+  {
+    to: "/productos",
+    text:"Productos"
+  }
+]

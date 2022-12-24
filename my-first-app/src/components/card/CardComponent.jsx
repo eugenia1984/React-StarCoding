@@ -1,10 +1,15 @@
 import React from "react";
-import { CARD } from "../international";
+import { CARD } from "../../international";
+import "./Card.css";
 
 const CardComponent = ({ product, addToShoppingCart }) => {
   return (
     <div className="card col-sm-6 col-md-4 col-lg-3 shopping-card">
-      <img src={product.thumbnail} className="card-img-top" alt={CARD.imgAlt} />
+      <img
+        src={product.thumbnail}
+        className="card-img-top card-image"
+        alt={CARD.imgAlt}
+      />
       <div className="card-body">
         <h5 className="card-title">{product.title}</h5>
         <p className="card-text">
