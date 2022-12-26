@@ -645,6 +645,64 @@ La estructora va a ser:
      > store
 ```
 
+
+### Primeros pasos: agregar nuestro Proveedor
+
+Al igual que context, necesitamos decirle a nuestra aplicación cuál es el punto de partida de la nformación. Para lograr esto, desde el archivo index.js (arhivo principal) le añadimos:
+```JSX
+<Provider store={Store} />
+```
+
+Recordá que el store es el archivo que creamos en el paso anterior.
+
+```JSX
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <React.StrictMode>
+    <Provider store={{}}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </Provider>
+  </React.StrictMode>
+);
+```
+
+
+### Creando Reducers
+
+Los **reducers** son funciones que se encargan de informar al store sobre que cambio de estado debe efectuarse. Esa información vendrá desde las **Actionas**(acciones).
+
+Para nuestro crrtio, creamos un reductor son su **initial_state**(estado inciial).
+
+Los reducers deberían ir dentro de la carpeta **redux** de esta manera: ```srx > reducers > cartReducer.js ```
+
+```JSX
+const INITIAL_STATE = {
+  cart: []
+}
+
+export const cartReducer = (state = INITIAL_STATE, action) => {
+  switch(action.type) {
+    case "":
+      return (
+        ...state,
+        cart:  [...state.cart, action.payload]
+      )
+    default:
+      return state
+  }
+}
+```
+
+Esta función que se va a exportar tiene dos parametros...
+
+... **state** es estado inicial
+
+... **action**, el tipo de acción, según cual sea con el switch vemos que retornamos. Si agregamos un nuevo producto retornamos el nuevo estado, utilizando el spread operator.
+
+**payload** es el valor que le vamos a enviar
+
 ### 7.3 - Consumiendo store - useSeletor
 
 ### 7.4 - Actualizamos nuestro store -useDispatch
