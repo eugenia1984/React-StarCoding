@@ -591,6 +591,10 @@ const { search } = useParams();
 
 ## :star: 7 - El store: Redux
 
+## ¿ Qué es Redux ?
+
+Es una herramienta que nos sirve para **gestionar estados de toda nuestra aplicación**, se puede considerar como una estepcie de **Estados GLobales**. Es una herramienta muy similar a **Context**
+
 ### 7.1 - Filtrando estados
 
 ### 7.2 - Introducción a Redux - configuración
