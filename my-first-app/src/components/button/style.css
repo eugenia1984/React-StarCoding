@@ -1,0 +1,23 @@
+.btn-add-product {
+  display: flex !important;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.btn-add-product  button {
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+  padding: 6px 12px;
+}
+
+
+.btn-add-product  button:hover {
+  background-color: black;
+  color: white;
+}

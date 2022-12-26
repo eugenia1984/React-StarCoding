@@ -1,7 +1,7 @@
 export const CARD = {
   price: "Precio: $",
   btnText: "Agregar",
-  imgAlt: "some random product",
+  imgAlt: "un producto",
 };
 
 export const INFO_BAR = {
@@ -26,3 +26,7 @@ export const NAVBAR = [
     text:"Productos"
   }
 ]
+
+export const BTN_ADD_PRODUCT = {
+  text: "Agregar al carrito"
+}

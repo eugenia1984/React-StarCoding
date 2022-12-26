@@ -4,7 +4,7 @@ const Search = ({ handleKeyUp }) => {
         <input
           type="text"
           onInput={handleKeyUp}
-          placeholder="Search by name..."
+          placeholder="Buscar por nombre..."
         />
       </div>
   )

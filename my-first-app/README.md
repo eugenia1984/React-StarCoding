@@ -24,7 +24,7 @@ Primer práctica del curso **React Básico** junto a **Star Coding**.
 
 ## ¿ De qué es la app?
 
-Un mini e-commerce, para practicar con React: componentes de presentación, componentes contenedores, eventos, hooks (useState, useEffect, useContext, useParams), renderizado condicional, consumir APIs, context, routing.
+Un mini e-commerce, para practicar con React: componentes de presentación, componentes contenedores, eventos, hooks (useState, useEffect, useContext, useParams, useSelector, useDispatch ), renderizado condicional, consumir APIs, context, routing, Redux.
 
 Se hacen consultas a la [API de Mercado Libre](https://api.mercadolibre.com/sites/MLA) renderizo productos.
 

@@ -13,6 +13,7 @@ export const cartReducer = (state = INIT_STATE, action) => {
       
       return {
         ...state,
+        cart: [...state.cart, action.payload]
       };
     default:
       return state;

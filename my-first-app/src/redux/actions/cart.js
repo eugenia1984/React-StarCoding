@@ -1,4 +1,4 @@
-export const addElementCart = (product) => ({
+export const addElementToCart = (product) => ({
   type: "PUSH NEW PRODUCT",
   payload: product,
 })

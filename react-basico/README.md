@@ -752,7 +752,72 @@ Todo esto en ```src > redux > store > index.js```
 
 ### 7.3 - Consumiendo store - useSeletor
 
+### ¿Cómo conusmimos esos datos?
+
+Nuevamente gracias a los hooks, podemos utilizar **useSelector** y **useDispatch** para poder traer y modificar datos.
+
+**useSelector** -> para traer el estado.
+
+**useDispatch** -> para actualizar el estado.
+
+En **App.js**:
+
+1. importo:
+```JSX
+import { useSelector } from "react-redux";
+```
+
+2. lo utilizo:
+```JSX
+const STATE = useSelector((state) => state.cartReducer);
+```
+
 ### 7.4 - Actualizamos nuestro store -useDispatch
+
+### ¿Y cómo lo actualizamos?
+
+El hook **useDipatch** permite actualizar el estado del store mediante un reducer. Un ejemplo:
+
+-> cada vez que el store modifica sus calores, se refleja en la vista automáticamente.
+
+En **App.jsx**:
+
+1. Lo importo:
+```JSX
+import { useDispatch, useSelector } from "react-redux";
+```
+
+2. Lo utilizo:
+```JSX
+const dispatch = useDispatch();
+```
+
+3. importo:
+```JSX
+import { addElementToCart } from "./redux/actions/cart";
+```
+
+4. Lo utilizo en un boton:
+```JSX
+  const STATE = useSelector((state) => state.cartReducer);
+  const dispatch = useDispatch();
+  console.log(STATE);
+
+  return (
+    <div className="App my-5 mx-3">
+      <button
+        onClick={() => {
+          dispatch(addElementToCart({ id: 1, name: "shirt", price: 3000 }));
+        }}
+      >
+        Agregar al carrito
+      </button>
+      // continua el codigo por aca
+  );
+```
+---
+
+:computer: -> [repositorio de Start Coding](https://github.com/CristianHourcade/ReactBasic)
 
 ---
 
