@@ -19,7 +19,7 @@ const CardComponent = ({ product, addToShoppingCart }) => {
           </strong>
         </p>
         <button
-          className="btn btn-primary"
+          className="btn btn-dark"
           onClick={(event) => {
             addToShoppingCart(event, product);
           }}

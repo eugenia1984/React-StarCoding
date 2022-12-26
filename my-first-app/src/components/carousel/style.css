@@ -1,0 +1,10 @@
+.img-carousel {
+  height: 300px;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 768px ) {
+  .img-carousel {
+    height: 450px;
+  }
+}

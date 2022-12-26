@@ -4,7 +4,7 @@ import "./style.css";
 const Error = ({ text }) => {
   return (
     <div>
-      <p>{text}</p>
+      <p className="error">{text}</p>
     </div>
   );
 };

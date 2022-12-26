@@ -1,0 +1,11 @@
+.registerForm {
+  background-color: rgb(182, 235, 217);
+  padding: 2rem 1rem;
+  border-radius: 12px;
+  -webkit-border-radius: 12px; 
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  max-width: 500px !important;
+  margin: 0 auto;
+}

@@ -56,5 +56,8 @@ export const YUP_MESSAGE = {
   emailFormat: "El correo electrónico debe tener un @ y un .",
   passwordRq: "La contraseña es obligatoria",
   passwordNotMatch: "Las contraseñas no coinciden"
+}
 
+export const FOOTER = {
+  text: "Me pueden encontrar en ... "
 }

@@ -1,4 +1,4 @@
-p {
+p.error {
   color: red;
   font-weight: 800;
 }

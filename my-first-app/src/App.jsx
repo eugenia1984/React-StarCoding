@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import ButtonAddToCart from "./components/button/ButtonAddToCart";
+import Footer from "./components/footer/Footer";
 import RegisterContainer from "./containers/form/RegisterContainer";
 import HomeContainer from "./containers/home/HomeContainer";
 import ProductsContainer from "./containers/products/ProductsContainer";
@@ -13,7 +14,7 @@ function App() {
   console.log(STATE);
 
   return (
-    <div className="App my-5 mx-3">
+    <div className="App mt-3">
       <ButtonAddToCart />
       <EcommerceProvider>
         <Routes>
@@ -23,6 +24,7 @@ function App() {
           <Route path="/registro" element={<RegisterContainer />} />
         </Routes>
       </EcommerceProvider>
+      <Footer />
     </div>
   );
 }

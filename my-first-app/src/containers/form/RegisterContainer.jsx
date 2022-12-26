@@ -3,13 +3,16 @@ import FormRegister from "../../components/form/FormRegister";
 import Navbar from "../../components/navbar/Navbar";
 import Title from "../../components/title/Title";
 import { REGISTER } from "../../international";
+import "./style.css";
 
 const RegisterContainer = () => {
   return (
     <>
       <Navbar />
-      <Title text={REGISTER.title} />
-      <FormRegister />
+      <div className="registerForm">
+        <Title text={REGISTER.title} />
+        <FormRegister />
+      </div>
     </>
   );
 };

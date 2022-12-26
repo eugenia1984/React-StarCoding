@@ -10,6 +10,6 @@
 }
 
 .card-image {
-  min-height: 240px;
+  min-height: 180px;
   object-fit: cover;
 }

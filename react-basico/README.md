@@ -915,6 +915,195 @@ Otro tipo de validación es **validateOnChange** me va a ir chequeando por cada 
 
 ### 8.5 - useFormik
 
+Es un custom hook (**useFormik**) que trae Formik.
+
+Le enviamos al hook:
+
+```JSX
+initialValues={{
+  name: "",
+  id: "",
+  phone: "",
+  email: "",
+  password: "",
+  repeatPassword: "",
+}}
+validationSchema={RegisterSchema}
+/*validateOnBlur */
+onSubmit={(values) => console.log(values)}
+validateOnSubmit
+```
+
+Y a través de **props** recibimos del hook:
+
+```JSX
+{
+  handleBlur,
+  handleChange,
+  handleSubmit,
+  values,
+  errors,
+  touched,
+}
+```
+
+Por lo que al momento tenemos creado el formulario ocn el componente **Formik**:
+
+```JSX
+import React, { useState } from "react";
+import { Formik } from "formik";
+import { RegisterSchema } from "./schema/registerSchema";
+import { FORM_REGISTER } from "../../international";
+import "./style.css";
+import Error from "../error/Error";
+
+const FormRegister = () => {
+  const [visible, setVisible] = useState(true);
+
+  return (
+    <div className="container mb-5 mt-2">
+      <Formik
+        initialValues={{
+          name: "",
+          id: "",
+          phone: "",
+          email: "",
+          password: "",
+          repeatPassword: "",
+        }}
+        validationSchema={RegisterSchema}
+        /*validateOnBlur */
+        onSubmit={(values) => console.log(values)}
+        validateOnSubmit
+      >
+        {({
+          handleBlur,
+          handleChange,
+          handleSubmit,
+          values,
+          errors,
+          touched,
+        }) => (
+          <form onSubmit={handleSubmit}>
+            <div className="form-input">
+              <input
+                placeholder="Nombre completo"
+                name="name"
+                onChange={handleChange("name")}
+                /* onBlur={handleBlur("name")} */
+                value={values.name}
+              />
+              {touched.name && errors.name && <Error text={errors.name} />}
+            </div>
+            <div className="form-input">
+              <input
+                placeholder="Número de documento"
+                name="id"
+                onChange={handleChange("id")}
+                /* onBlur={handleBlur("id")} */
+                value={values.id}
+              />
+              {touched.id && errors.id && <Error text={errors.id} />}
+            </div>
+            <div className="form-input">
+              <input
+                placeholder="Número de teléfono"
+                name="phone"
+                onChange={handleChange("phone")}
+                /* onBlur={handleBlur("phone")} */
+                value={values.phone}
+              />
+              {touched.phone && errors.phone && <Error text={errors.phone} />}
+            </div>
+            <div className="form-input">
+              <input
+                placeholder="Correo electrónico"
+                name="email"
+                onChange={handleChange("email")}
+                /* onBlur={handleBlur("email")} */
+                value={values.email}
+              />
+              {touched.email && errors.email && <Error text={errors.email} />}
+            </div>
+            <div className="form-input">
+              <input
+                placeholder="Crea tu contraseña"
+                name="password"
+                type="password"
+                onChange={handleChange("password")}
+                /* onBlur={handleBlur("password")} */
+                value={values.password}
+              />
+              {touched.password && errors.password && (
+                <Error text={errors.password} />
+              )}
+            </div>
+            <div className="form-input">
+              <input
+                placeholder="Repetí la contraseña"
+                name="repeatPassword"
+                type={visible ? "text" : "password"}
+                onChange={handleChange("repeatPassword")}
+                /* onBlur={handleBlur("repeatPassword")} */
+                value={values.repeatPassword}
+              />
+              {touched.repeatPassword && errors.repeatPassword && (
+                <Error text={errors.repeatPassword} />
+              )}
+            </div>
+            <div>
+              <button  className="btn-hide-show" onClick={() => setVisible(!visible)}>
+                {visible ? "Ocultar contraseña" : "Mostrar contraseña"}
+              </button>
+            </div>
+            <div className="btn-register">
+              <button type="submit">{FORM_REGISTER.btnTxt}</button>
+            </div>
+          </form>
+        )}
+      </Formik>
+    </div>
+  );
+};
+
+export default FormRegister;
+```
+
+Ahora vamos a armarlo con el hook **useFormik**, para eso:
+
+```JSX
+const formik = useFormik({
+    initialValues: {
+      name: "",
+      id: "",
+      phone: "",
+      email: "",
+      password: "",
+      repeatPassword: "",
+    },
+    validationSchema: RegisterSchema,
+    onSubmit: (values) => console.log(values)
+  });
+```
+
+Y para no estar poniendo todo con **formik.** desestructuro:
+
+```JSX
+const { handleSubmit, handleChange, touched, errors, values } = formik;
+```
+
+Y en los **hanldeChange** no es necesario le pase entre los () a que campo me refiero.
+
 ### 8.6 - RegEx
+
+Una **expresión regular** es una cadena de caracteres que es utilizada para describir o encontrar patrones (matchear) dentro de otros strings, en base al uso de delimitadores y ciertas reglas de sintaxis.
+
+[regexpal.com](https://www.regexpal.com)
+
+**?** -> es opcional
+
+**{3}** -> Tiene 3, el número que le pongo entre las {} es la cantidad exacta
+
+**{3,6}** -> Tiene de 3 a 6, aca le indico un rango de cantidad posible
 
 ---

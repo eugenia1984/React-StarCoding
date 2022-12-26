@@ -5,7 +5,7 @@ import "./Navbar.css";
 
 const Navbar = () => {
   return (
-    <div className="my-4">
+    <div className="my-4 navbar-menu">
       {NAVBAR.map((element, index) => (
         <Link to={element.to} className="navbar-link" key={index}>
           {element.text}
