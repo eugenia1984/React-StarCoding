@@ -1,13 +1,13 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import CardComponent from "../components/card/CardComponent";
-import InfoBarComponent from "../components/InfoBarComponent";
-import Loader from "../components/Loader";
-import Search from "../components/search/Search";
-import { EcommerceContext } from "../context/EcommerceContext";
+import CardComponent from "../../components/card/CardComponent";
+import InfoBarComponent from "../../components/InfoBarComponent";
+import Loader from "../../components/Loader";
+import Search from "../../components/search/Search";
+import { EcommerceContext } from "../../context/EcommerceContext";
 
-import { PRODUCTS } from "../international";
-import { INFO_BAR } from "../international";
+import { PRODUCTS } from "../../international";
+import { INFO_BAR } from "../../international";
 
 const ProductsContainer = () => {
   const [searchTerm, setSearchTerm] = useState();

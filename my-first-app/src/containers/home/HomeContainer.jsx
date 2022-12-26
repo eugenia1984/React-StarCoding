@@ -1,8 +1,9 @@
+import React from "react";
 import { useContext } from "react";
-import InfoBarComponent from "../components/InfoBarComponent";
-import { EcommerceContext } from "../context/EcommerceContext";
+import InfoBarComponent from "../../components/InfoBarComponent";
+import { EcommerceContext } from "../../context/EcommerceContext";
 
-import { HOME_MESSAGE } from "../international";
+import { HOME_MESSAGE } from "../../international";
 
 const HomeContainer = () => {
   const { shoppingCart } = useContext(EcommerceContext);

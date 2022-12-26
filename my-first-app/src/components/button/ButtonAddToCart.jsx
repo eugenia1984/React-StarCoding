@@ -1,3 +1,4 @@
+import React from "react";
 import { useDispatch } from "react-redux";
 import { addElementToCart } from "../../redux/actions/cart";
 import { BTN_ADD_PRODUCT } from "../../international";
@@ -17,6 +18,6 @@ const ButtonAddToCart = () => {
       </button>
     </div>
   );
-}
+};
 
 export default ButtonAddToCart;

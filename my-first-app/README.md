@@ -20,6 +20,10 @@ Primer práctica del curso **React Básico** junto a **Star Coding**.
 
 - **reduxjs/toolkit**, versión 1.9.1.
 
+- **formik**, versión 2.2.9.
+
+- **yup**, versión 0.32.11.
+
 ---
 
 ## ¿ De qué es la app?
