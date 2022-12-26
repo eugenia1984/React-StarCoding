@@ -600,6 +600,9 @@ Me va quedando asi:
 
 Es una herramienta que nos sirve para **gestionar estados de toda nuestra aplicación**, se puede considerar como una estepcie de **Estados GLobales**. Es una herramienta muy similar a **Context**
 
+
+### 7.1 - Filtrando estados
+
 ## ¿ Cómo funciona ?
 
 ![image](https://user-images.githubusercontent.com/72580574/209558135-bbe8b175-c9ce-48da-9dc6-356f1bcdcf05.png)
@@ -619,7 +622,6 @@ npm install @redux/toolkit
 
 :computer: -> [Pagina web: https://react-redux.js.org/](https://react-redux.js.org/)
 
-### 7.1 - Filtrando estados
 
 ### 7.2 - Introducción a Redux - configuración
 
@@ -675,7 +677,7 @@ Los **reducers** son funciones que se encargan de informar al store sobre que ca
 
 Para nuestro crrtio, creamos un reductor son su **initial_state**(estado inciial).
 
-Los reducers deberían ir dentro de la carpeta **redux** de esta manera: ```srx > reducers > cartReducer.js ```
+Los reducers deberían ir dentro de la carpeta **redux** de esta manera: ```src > reducers > cartReducer.js ```
 
 ```JSX
 const INITIAL_STATE = {
