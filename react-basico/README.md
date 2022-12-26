@@ -703,6 +703,51 @@ Esta función que se va a exportar tiene dos parametros...
 
 **payload** es el valor que le vamos a enviar
 
+
+### Combinando Reducers
+
+Es normal que en una aplicación tengamos más de un reducer, y para que redux pueda yilizarlo, necesitamos combinarlos.
+
+Este archivo de debería encontrar en: ```src > redux > reducers > index.js```
+
+```JSX
+import { combineReducers } from "redux";
+import { cartReducer } from "./cart";
+
+export default combineReducers({
+  cartReducers: cartReducers,
+})
+```
+
+**combineReducers** combina todas las funciones reductoras.
+
+### Creando Actions
+
+Como dijimos, las acciones se encargan de decirle a redux que tipo de acción se está por ejecutar y que valores se deben trabajar (payload). En nuestro caso, el payload, va a ser el nuevo elemento a guardar en el carrito.
+
+```JSX
+export const addElementCart = (product) => ({
+  type: "PUSH NEW PRODUCT",
+  payload: product,
+})
+```
+
+Esto va en ```src > redux > actions```.
+
+### Modificando Store
+
+Una vez que tengamos los reducers y los actions, lo único que nos queda es importar en el **Store** todos los reducers combinándolos de esta manera:
+
+```JSX
+import { createStore } from "@redux/toolkit";
+import reducers from "../reducers/index";
+
+export const Store = createStore(reducers);
+```
+
+Todo esto en ```src > redux > store > index.js```
+
+
 ### 7.3 - Consumiendo store - useSeletor
 
 ### 7.4 - Actualizamos nuestro store -useDispatch
