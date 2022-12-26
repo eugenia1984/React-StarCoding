@@ -610,6 +610,15 @@ A diferencia de context Redux tiene un solo STORE, y muchas funciones reductoras
 
 Usos: estados globales para token de login, estados globales para el carrito.
 
+## Instalación
+
+```
+npm install react-redux
+npm install @redux/toolkit
+```
+
+:computer: -> [Pagina web: https://react-redux.js.org/](https://react-redux.js.org/)
+
 ### 7.1 - Filtrando estados
 
 ### 7.2 - Introducción a Redux - configuración

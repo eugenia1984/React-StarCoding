@@ -16,6 +16,10 @@ Primer práctica del curso **React Básico** junto a **Star Coding**.
 
 - **react-router-dom**, versión 6.6.0, para el maneja de las rutas dentro de la aplicación.
 
+- **react- redux**, versión 8.0.5.
+
+- **reduxjs/toolkit**, versión 1.9.1.
+
 ---
 
 ## ¿ De qué es la app?
