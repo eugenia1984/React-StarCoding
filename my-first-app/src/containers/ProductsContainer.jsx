@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import CardComponent from "../components/card/CardComponent";
 import InfoBarComponent from "../components/InfoBarComponent";
 import Loader from "../components/Loader";
+import Search from "../components/search/Search";
 import { EcommerceContext } from "../context/EcommerceContext";
 
 import { PRODUCTS } from "../international";
@@ -43,6 +44,7 @@ const ProductsContainer = () => {
         text={INFO_BAR.text}
         handleKeyUp={handleKeyUp}
       />
+      <Search handleKeyUp={handleKeyUp} />
       <div className="row">
         {products.length === 0 ? (
           <Loader text={PRODUCTS.loading} />

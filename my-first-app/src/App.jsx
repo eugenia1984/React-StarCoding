@@ -7,7 +7,7 @@ import { EcommerceProvider } from "./context/EcommerceContext";
 
 function App() {
   return (
-    <div className="App my-5 mx-2">
+    <div className="App my-5 mx-3">
       <EcommerceProvider>
         <Routes>
           <Route path="/" element={<HomeContainer />} />

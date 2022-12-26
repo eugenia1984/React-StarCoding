@@ -5,9 +5,9 @@ import "./Navbar.css";
 
 const Navbar = () => {
   return (
-    <div>
-      {NAVBAR.map((element) => (
-        <Link to={element.to} className="navbar-link">
+    <div className="my-4">
+      {NAVBAR.map((element, index) => (
+        <Link to={element.to} className="navbar-link" key={index}>
           {element.text}
         </Link>
       ))}

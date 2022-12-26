@@ -16,7 +16,6 @@ export const EcommerceProvider = ({ children }) => {
       );
       const result = await data.json();
       setProducts(result.results);
-      console.log(result.results)
     } catch (error) {
       setError("Ocurrió un error");
     } finally {
