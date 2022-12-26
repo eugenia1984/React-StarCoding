@@ -823,6 +823,9 @@ import { addElementToCart } from "./redux/actions/cart";
 
 ## :star: 8 - Forms
 
+![image](https://user-images.githubusercontent.com/72580574/209573842-65f2291c-26a6-42d3-b90a-0c4b9514bdf6.png)
+
+
 ### 8.1 - Introducción a forms
 
 ### 8.2 - Validaciones básicas
