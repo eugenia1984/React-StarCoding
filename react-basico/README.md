@@ -587,6 +587,11 @@ const { search } = useParams();
 
 ### 6.4 - Rutas dinámicas y contenido
 
+Me va quedando asi:
+
+![image](https://user-images.githubusercontent.com/72580574/209558097-9a9595de-6551-4aed-94d1-0240ee6ae6a5.png)
+
+
 ---
 
 ## :star: 7 - El store: Redux
@@ -594,6 +599,16 @@ const { search } = useParams();
 ## ¿ Qué es Redux ?
 
 Es una herramienta que nos sirve para **gestionar estados de toda nuestra aplicación**, se puede considerar como una estepcie de **Estados GLobales**. Es una herramienta muy similar a **Context**
+
+## ¿ Cómo funciona ?
+
+![image](https://user-images.githubusercontent.com/72580574/209558135-bbe8b175-c9ce-48da-9dc6-356f1bcdcf05.png)
+
+La **UI**(el HTML), la **vista**, cuando quiere **cambiar el estado** hace un **dispatch** (despacha) a **Redux** para hacer una **acción**, que se la pasa como **función** y se denomina **reducer**(es una función reductora que realiza la lógica) y lego se guarda en el **store**. Una vez que se actualiza el estado se devuelve (**suscribe**) a la UI.
+
+A diferencia de context Redux tiene un solo STORE, y muchas funciones reductoras.
+
+Usos: estados globales para token de login, estados globales para el carrito.
 
 ### 7.1 - Filtrando estados
 
