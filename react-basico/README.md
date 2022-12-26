@@ -623,6 +623,28 @@ npm install @redux/toolkit
 
 ### 7.2 - Introducción a Redux - configuración
 
+### Primeros pasos : crear nuestro Store
+
+Creamos una carpeta dentro de src que se llame **Redux**.
+
+Dentro creamos otro directorio que se llame **Store** y dentro de nuestro archivo **index.js** -> ```src > redux > store > index.js```:
+
+```JSX
+import { createStore } from "@redux/toolkit";
+
+// nuestro store ira aca
+```
+
+La estructora va a ser:
+
+```
+> src
+   > redux
+     > actions
+     > reducers
+     > store
+```
+
 ### 7.3 - Consumiendo store - useSeletor
 
 ### 7.4 - Actualizamos nuestro store -useDispatch
