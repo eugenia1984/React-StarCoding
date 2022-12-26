@@ -739,10 +739,10 @@ Esto va en ```src > redux > actions```.
 Una vez que tengamos los reducers y los actions, lo único que nos queda es importar en el **Store** todos los reducers combinándolos de esta manera:
 
 ```JSX
-import { createStore } from "@redux/toolkit";
-import reducers from "../reducers/index";
+import { createStore } from "react-redux";
+import Reducers from "../reducers/index";
 
-export const Store = createStore(reducers);
+export const Store = createStore(Reducers);
 ```
 
 Todo esto en ```src > redux > store > index.js```

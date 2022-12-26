@@ -2,7 +2,7 @@ const INIT_STATE = {
   cart: [],
 };
 
-export const cardReducer = (state = INIT_STATE, action) => {
+export const cartReducer = (state = INIT_STATE, action) => {
   switch (action.type) {
     case "PUSH NEW PRODUCT":
       if(action.payload) {
