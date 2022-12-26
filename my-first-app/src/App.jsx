@@ -20,7 +20,7 @@ function App() {
           <Route path="/" element={<HomeContainer />} />
           <Route path="/productos" element={<ProductsContainer />} />
           <Route path="/productos/:busqueda" element={<ProductsContainer />} />
-          <Route path="/contacto" element={<RegisterContainer />} />
+          <Route path="/registro" element={<RegisterContainer />} />
         </Routes>
       </EcommerceProvider>
     </div>

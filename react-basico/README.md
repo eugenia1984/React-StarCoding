@@ -553,9 +553,6 @@ EL **EcommerceProvider** lo paso afuera de **Routes** asi esta disponible para t
 
 ![image](https://user-images.githubusercontent.com/72580574/208983575-89bd8924-3def-46f0-89b2-a83baa23b8dc.png)
 
-
-
-
 ### 6.2 - Navegación entre componentes
 
 Armar el **routing** de la aplicación, acorde a la tuta en la que estamos, voy a renderizar distintos componentes.
@@ -564,33 +561,33 @@ Armar el **routing** de la aplicación, acorde a la tuta en la que estamos, voy 
 
 Para recibir ese parámetro desde el componente, lo que haremos será usar un hook: **useParams**, lo podemos utilizar para leer en JavaScript los parámetros de la ruta y en combinación con un useEffect nos sirve para obtener actualizaciones sobre los parámetros.
 
-Vamos a mandar **Variables** a través de la URL para poder hacer la búsqueda. Ya en *ProductsContainer** tenemos un listado de productos que viene de **EcommerceContext** , donde hacemos el **fetch** a la PAI de Mercado Libre con **https://api.mercadolibre.com/sites/MLA/search?q=zapatillas**, donde justamente ```q=zapatillas``` es el parámetro de busqueda para traer solo las zapatillas.
+Vamos a mandar **Variables** a través de la URL para poder hacer la búsqueda. Ya en \*ProductsContainer** tenemos un listado de productos que viene de **EcommerceContext** , donde hacemos el **fetch** a la PAI de Mercado Libre con **https://api.mercadolibre.com/sites/MLA/search?q=zapatillas**, donde justamente `q=zapatillas` es el parámetro de busqueda para traer solo las zapatillas.
 
 Entonces en **App** agregamos la URL para tener esta búsqueda dinímica con el pa´rametro:
+
 ```JSX
 <Route path="/productos/:busqueda" element={<ProductsContainer />} />
 ```
 
-En **ProductsContainer** voy a importar 
+En **ProductsContainer** voy a importar
+
 ```JSX
 import { useParams } from "react-router-dom";
 ```
 
 Para poder usarlo guardandolo en una oonstante:
+
 ```JSX
 const { search } = useParams();
 ```
 
 -> Si tengo una **ruta dinamica** el parametro siempre va con **:** adelante (lo que indica es dinamico, es una variable).
 
-
-
 ### 6.4 - Rutas dinámicas y contenido
 
 Me va quedando asi:
 
 ![image](https://user-images.githubusercontent.com/72580574/209558097-9a9595de-6551-4aed-94d1-0240ee6ae6a5.png)
-
 
 ---
 
@@ -599,7 +596,6 @@ Me va quedando asi:
 ## ¿ Qué es Redux ?
 
 Es una herramienta que nos sirve para **gestionar estados de toda nuestra aplicación**, se puede considerar como una estepcie de **Estados GLobales**. Es una herramienta muy similar a **Context**
-
 
 ### 7.1 - Filtrando estados
 
@@ -622,14 +618,13 @@ npm install @redux/toolkit
 
 :computer: -> [Pagina web: https://react-redux.js.org/](https://react-redux.js.org/)
 
-
 ### 7.2 - Introducción a Redux - configuración
 
 ### Primeros pasos : crear nuestro Store
 
 Creamos una carpeta dentro de src que se llame **Redux**.
 
-Dentro creamos otro directorio que se llame **Store** y dentro de nuestro archivo **index.js** -> ```src > redux > store > index.js```:
+Dentro creamos otro directorio que se llame **Store** y dentro de nuestro archivo **index.js** -> `src > redux > store > index.js`:
 
 ```JSX
 import { createStore } from "@redux/toolkit";
@@ -647,10 +642,10 @@ La estructora va a ser:
      > store
 ```
 
-
 ### Primeros pasos: agregar nuestro Proveedor
 
 Al igual que context, necesitamos decirle a nuestra aplicación cuál es el punto de partida de la nformación. Para lograr esto, desde el archivo index.js (arhivo principal) le añadimos:
+
 ```JSX
 <Provider store={Store} />
 ```
@@ -670,14 +665,13 @@ root.render(
 );
 ```
 
-
 ### Creando Reducers
 
 Los **reducers** son funciones que se encargan de informar al store sobre que cambio de estado debe efectuarse. Esa información vendrá desde las **Actionas**(acciones).
 
 Para nuestro crrtio, creamos un reductor son su **initial_state**(estado inciial).
 
-Los reducers deberían ir dentro de la carpeta **redux** de esta manera: ```src > reducers > cartReducer.js ```
+Los reducers deberían ir dentro de la carpeta **redux** de esta manera: `src > reducers > cartReducer.js `
 
 ```JSX
 const INITIAL_STATE = {
@@ -705,12 +699,11 @@ Esta función que se va a exportar tiene dos parametros...
 
 **payload** es el valor que le vamos a enviar
 
-
 ### Combinando Reducers
 
 Es normal que en una aplicación tengamos más de un reducer, y para que redux pueda yilizarlo, necesitamos combinarlos.
 
-Este archivo de debería encontrar en: ```src > redux > reducers > index.js```
+Este archivo de debería encontrar en: `src > redux > reducers > index.js`
 
 ```JSX
 import { combineReducers } from "redux";
@@ -734,7 +727,7 @@ export const addElementCart = (product) => ({
 })
 ```
 
-Esto va en ```src > redux > actions```.
+Esto va en `src > redux > actions`.
 
 ### Modificando Store
 
@@ -747,8 +740,7 @@ import Reducers from "../reducers/index";
 export const Store = createStore(Reducers);
 ```
 
-Todo esto en ```src > redux > store > index.js```
-
+Todo esto en `src > redux > store > index.js`
 
 ### 7.3 - Consumiendo store - useSeletor
 
@@ -763,11 +755,13 @@ Nuevamente gracias a los hooks, podemos utilizar **useSelector** y **useDispatch
 En **App.js**:
 
 1. importo:
+
 ```JSX
 import { useSelector } from "react-redux";
 ```
 
 2. lo utilizo:
+
 ```JSX
 const STATE = useSelector((state) => state.cartReducer);
 ```
@@ -783,21 +777,25 @@ El hook **useDipatch** permite actualizar el estado del store mediante un reduce
 En **App.jsx**:
 
 1. Lo importo:
+
 ```JSX
 import { useDispatch, useSelector } from "react-redux";
 ```
 
 2. Lo utilizo:
+
 ```JSX
 const dispatch = useDispatch();
 ```
 
 3. importo:
+
 ```JSX
 import { addElementToCart } from "./redux/actions/cart";
 ```
 
 4. Lo utilizo en un boton:
+
 ```JSX
   const STATE = useSelector((state) => state.cartReducer);
   const dispatch = useDispatch();
@@ -815,6 +813,7 @@ import { addElementToCart } from "./redux/actions/cart";
       // continua el codigo por aca
   );
 ```
+
 ---
 
 :computer: -> [repositorio de Start Coding](https://github.com/CristianHourcade/ReactBasic)
@@ -823,16 +822,96 @@ import { addElementToCart } from "./redux/actions/cart";
 
 ## :star: 8 - Forms
 
-![image](https://user-images.githubusercontent.com/72580574/209573842-65f2291c-26a6-42d3-b90a-0c4b9514bdf6.png)
+En el curso en realidad es otra aplicación separada, pero para tener todo jutno voy a crear otra opción en la barra de navegación para poder ver el formulario y practicar esta parte.
 
+![image](https://user-images.githubusercontent.com/72580574/209573842-65f2291c-26a6-42d3-b90a-0c4b9514bdf6.png)
 
 ### 8.1 - Introducción a forms
 
+- Vamos a utilizar [**formik**](https://formik.org/)
+
+- Instalación de **formik**: `npm install formik --save` ó `npm i formik --save`
+
+- También vamos a utilizar [**YUP**](https://www.npmjs.com/package/yup)
+
+- Instalación de **YUP**: `npm install yup` ó `npm i yup`
+
+- Para los estilos va a utilizar **Styled components**, se instala con : `npm install styled-components `
+
+Para poder utilizarlos debo importarlos:
+
+```JSX
+import { Formik } from "formik";
+import * as Yup from "yup";
+```
+
+Al **form** lo paso al componente de formik: `<Formik></Formik>` al cual deno setearle los **valores iniciales**: ` <Formik initialValues={{ name: "", id: "", phone: "", email: "", password: "" }}>`
+
+Cada uno de los **input** van a tener el atributo `name` que van a coincidir con los que paso como **initialValues**
+
+Un input como ejemplo:
+
+```JSX
+<input
+  placeholder="Nombre completo"
+  name="name"
+  value={values.name}
+  onChange={handleChange("name")}
+/>
+```
+
 ### 8.2 - Validaciones básicas
+
+En `<Formik>` también vamos a tener **validationSchema={ RegisterSchema }**
+
+Y **RegisterSchema** es otro archivo aparte que va a tener justamente las validaciones de **Yup**:
+
+```JSX
+import * as Yup from "yup";
+import { YUP_MESSAGE } from ".././../../international";
+
+export const RegisterSchema = Yup.object().shape({
+  name: Yup.string().required(YUP_MESSAGE.nameRq),
+  id: Yup.number().required(YUP_MESSAGE.idRq),
+  phone: Yup.number().required(YUP_MESSAGE.phoneRq),
+  email: Yup.string()
+    .email(YUP_MESSAGE.emailFormat)
+    .required(YUP_MESSAGE.emailRq),
+  password: Yup.string().required(YUP_MESSAGE.passwordRq),
+});
+```
+
+**.string()** -> para validar que el valor del input sea de tipo string
+
+**.number()** -> para validar que el valor del input sea de tipo number
+
+**.required()** -> el input es requerido (obligatorio).
+
+**.email()** -> para validar que sea email, es decir que tenga **@** y un **.**.
 
 ### 8.3 - Validaciones avanzadas
 
+Para que no me aparezcan todos los mensajes de error juntos.
+
+Dentro de `<Formik />` agrego **validateOnBlur**
+
+Y en el `<input />` agrego : **onBlur={handleBlur("name")}**
+
+De Yup también voy a utilizar **touched**, si tocamos el campo (input) y tiene un error, entonces me lo muestra, etonces voy a tener: `{touched.id && errors.id && <p>{errors.id}</p>}`.
+
+Y el **botón de registro** debe ser de tipo **submit**:
+
+```JSX
+<div className="btn-register">
+  <button type="submit">{FORM_REGISTER.btnTxt}</button>
+</div>
+```
+
 ### 8.4 - Validaciones onSubmitBlur
+
+En vez de utilizar **validateOnBlur** podemos usar **validateOnSubmit** . Para ello debo tener en vez de un **div**, un **form** para poder usar **\*onSubmit**: `<form onSubmit={handleSubmit}>`.
+
+Otro tipo de validación es **validateOnChange** me va a ir chequeando por cada vez que ingrese un dato.
 
 ### 8.5 - useFormik
 

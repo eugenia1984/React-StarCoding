@@ -26,8 +26,8 @@ export const NAVBAR = [
     text: "Productos",
   },
   {
-    to: "/contacto",
-    text: "Contacto",
+    to: "/registro",
+    text: "Registro",
   },
 ];
 
@@ -36,7 +36,7 @@ export const BTN_ADD_PRODUCT = {
 };
 
 export const REGISTER = {
-  title: "Formulario"
+  title: "Formulario de registro"
 }
 
 export const FORM_REGISTER = {
@@ -45,10 +45,16 @@ export const FORM_REGISTER = {
 
 export const YUP_MESSAGE = {
   nameRq: "El nombre es obligatorio",
-  idRq: "El id es obligatorio",
+  nameOnlyLetters: "Solo acepta letras",
+  idRq: "El DNI es obligatorio",
+  idTypeError: "Solo acepta números",
+  idMin: "El documento debe ser mayor a 2 millones",
+  idMax: "El documento debe ser menor a 60 millones",
   phoneRq: "El teléfono es obligatorio",
+  phoneTypeError: "Solo acepta números",
   emailRq: "El correo electrónico es obligatorio",
   emailFormat: "El correo electrónico debe tener un @ y un .",
-  passwordRq: "La contraseña es obligatoria"
+  passwordRq: "La contraseña es obligatoria",
+  passwordNotMatch: "Las contraseñas no coinciden"
 
 }
