@@ -63,6 +63,9 @@ const Welcome = (props) => {
 
 ... **useContext**, usar un contexto creado para consumir estados
 
+![image](https://user-images.githubusercontent.com/72580574/209713101-d072a34d-ff8d-4538-b948-e672b8045577.png)
+
+
 -> Un estado(**state**) es un hook. El **hook** viene a reemplazar las funciones de los componentes de clase tienen para su ciclo de vida.
 
 ```JSX
