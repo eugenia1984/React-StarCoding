@@ -57,16 +57,20 @@ const Welcome = (props) => {
 
 - **Componentes con hooks**, los más utiliados son ...
 
-... **useState**, guarda le estado de un componente
+... **useState**, guarda el estado (variables -valores-) de un componente, y utilizando **setVariable** voy a setear el nuevo valor, actualizo.
 
 ... **useEffect**, controla los ciclos de vida del componente
 
-... **useContext**, usar un contexto creado para consumir estados
-
 ![image](https://user-images.githubusercontent.com/72580574/209713101-d072a34d-ff8d-4538-b948-e672b8045577.png)
 
+... **useContext**, usar un contexto creado para consumir estados. Viene a reemplazar a Redux, es más fácil de instalar y configurar.
 
--> Un estado(**state**) es un hook. El **hook** viene a reemplazar las funciones de los componentes de clase tienen para su ciclo de vida.
+PAra crear el Contet hay que crear un componente que se va a encargar de ser el proveedor(**provider**) de los estados (**States**).
+
+
+
+
+-> Un estado(**state**) es un hook. El **hook** viene a reemplazar las funciones de los componentes de clase tienen para su ciclo de vida (componentDidMount, por ejemplo).
 
 ```JSX
 
