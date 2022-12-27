@@ -11,7 +11,6 @@ import { EcommerceProvider } from "./context/EcommerceContext";
 
 function App() {
   const STATE = useSelector((state) => state.cartReducer);
-  console.log(STATE);
 
   return (
     <div className="App mt-3">

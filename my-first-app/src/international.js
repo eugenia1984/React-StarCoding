@@ -32,7 +32,7 @@ export const NAVBAR = [
 ];
 
 export const BTN_ADD_PRODUCT = {
-  text: "Agregar al carrito",
+  text: "Mira la consola al hacer click",
 };
 
 export const REGISTER = {

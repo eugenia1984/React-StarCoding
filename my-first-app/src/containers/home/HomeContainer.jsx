@@ -1,7 +1,7 @@
 import React from "react";
 import { useContext } from "react";
 import Carousel from "../../components/carousel/Carousel";
-import InfoBarComponent from "../../components/InfoBarComponent";
+import InfoBarComponent from "../../components/infobar/InfoBarComponent";
 import { EcommerceContext } from "../../context/EcommerceContext";
 
 import { HOME_MESSAGE } from "../../international";

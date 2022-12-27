@@ -1,0 +1,9 @@
+ul {
+  list-style-position: inside;
+  padding: 1.50rem 1rem;
+}
+li {
+  background-color: rgb(182, 235, 217);
+  padding: 0.75rem 0.50rem;
+
+}

@@ -1,8 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import CardComponent from "../../components/card/CardComponent";
-import InfoBarComponent from "../../components/InfoBarComponent";
-import Loader from "../../components/Loader";
+import InfoBarComponent from "../../components/infobar/InfoBarComponent";
+import Loader from "../../components/loader/Loader";
 import Search from "../../components/search/Search";
 import { EcommerceContext } from "../../context/EcommerceContext";
 
