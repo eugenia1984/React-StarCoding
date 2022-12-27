@@ -72,6 +72,9 @@ PAra crear el Contet hay que crear un componente que se va a encargar de ser el 
 
 -> Un estado(**state**) es un hook. El **hook** viene a reemplazar las funciones de los componentes de clase tienen para su ciclo de vida (componentDidMount, por ejemplo).
 
+![image](https://user-images.githubusercontent.com/72580574/209713932-6c4a7737-98b5-4592-96b9-8ad73727d89e.png)
+
+
 ```JSX
 
 ```
