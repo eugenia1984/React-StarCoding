@@ -29,7 +29,7 @@
 
 ### Certificado
 
-<img src="https://user-images.githubusercontent.com/72580574/209708456-0d435886-30ff-49ea-8c60-a6d3f2d32960.png" alt="certificado"  width="380">
+<img src="https://user-images.githubusercontent.com/72580574/209708456-0d435886-30ff-49ea-8c60-a6d3f2d32960.png" alt="certificado"  width="500">
 
 ---
 
