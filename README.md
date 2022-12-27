@@ -26,6 +26,16 @@ Temas:
 
 - [**Curso: React Avanzado**](https://github.com/eugenia1984/React-StarCoding/tree/main/react-avanzado)
 
+
+Temas:
+
+1. Introducción
+2. React Lazy & Suspense
+3. NextJS
+4. Graphql
+5. Jest & React Testing Library
+6. Manejo de errores
+
 ---
 
 ## Tecnologías 🛠️
