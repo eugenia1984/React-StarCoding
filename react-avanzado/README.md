@@ -1,4 +1,4 @@
-# <img src="https://img.icons8.com/bubbles/30/null/react.png"/> React Avanzado
+# <img src="https://img.icons8.com/bubbles/40/null/react.png"/> React Avanzado
 
 Temas: 
 
@@ -19,10 +19,10 @@ Temas:
 
 ---
 
-## :star: 1. Introducción
+## :star2: 1. Introducción
 
 
-## 1.1 - Introoducción teórica
+### :star: 1.1 - Introoducción teórica
 
 ### Repaso React.JS
 
@@ -74,40 +74,45 @@ PAra crear el Contet hay que crear un componente que se va a encargar de ser el 
 
 ![image](https://user-images.githubusercontent.com/72580574/209713932-6c4a7737-98b5-4592-96b9-8ad73727d89e.png)
 
+renderiza el provider con los children adentro, cada vez que el provider se actualice se actualizan sus childrens. Asi manejamos los **estados globales**
 
-```JSX
+### <img src="https://img.icons8.com/windows/32/null/strategy-board.png"/> Challenge:
 
-```
-## 1.2 - Componentes
+Crear una app sencilla, con 3 pantallas para repasar todos los conceptos vistos hasta el momento, con: home -> listado de productos -> detalle producto
 
-## 1.3 - Routing
 
-## 1.4 - Estados y técnicas de rendering
 
-## 1.5 - useParams
+:computer: -> [se puede ver en **challenge**]
+### :star: 1.2 - Componentes
 
-## 1.6 - useContext
+### :star: 1.3 - Routing
 
-## 1.7 - UseEffect
+### :star: 1.4 - Estados y técnicas de rendering
 
----
+### :star: 1.5 - useParams
 
-## :star: 2. React Lazy & Suspense
+### :star: 1.6 - useContext
 
----
-
-## :star: 3. NextJS
+## :star:# 1.7 - UseEffect
 
 ---
 
-## :star: 4. Graphql
+## :star2: 2. React Lazy & Suspense
 
 ---
 
-## :star: 5. Jest & React Testing Library
+## :star2: 3. NextJS
 
 ---
 
-## :star: 6. Manejo de errores
+## :star2: 4. Graphql
+
+---
+
+## :star2: 5. Jest & React Testing Library
+
+---
+
+## :star2: 6. Manejo de errores
 
 ---
