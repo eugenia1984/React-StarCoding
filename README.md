@@ -34,7 +34,7 @@ Realicé dos cursos junto a **StarCoding** de **React**:
 ## Prácticas
 
 
-En [**my-first-app**](https://github.com/eugenia1984/React-StarCoding/tree/main/my-first-app) está la primer práctica de React.
+En [**my-first-app**](https://github.com/eugenia1984/React-StarCoding/tree/main/my-first-app) está la primer práctica de React, que se puede ver [el deploy acá](https://react-basico-start-coding.netlify.app/)
 
 ---
 
