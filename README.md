@@ -6,6 +6,8 @@ Realicé dos cursos junto a **StarCoding** de **React**:
 
 - [**React Básico**](https://github.com/eugenia1984/React-StarCoding/tree/main/react-basico):
 
+Temas:
+
 1. Introduccion a React
 2. Componentes y Eventos
 3. Hooks
@@ -18,6 +20,9 @@ Realicé dos cursos junto a **StarCoding** de **React**:
 ➡️ [Demo](https://react-basico-start-coding.netlify.app/)
 
 ➡️ [Certificado](https://github.com/eugenia1984/React-StarCoding/blob/main/certificado_react_basico.pdf)
+
+<img src="https://user-images.githubusercontent.com/72580574/209708680-7c52dee0-e8bd-4d90-987e-062188dd42f2.png" alt="certificado" width= "400" >
+
 
 - [**React Avanzado**](https://github.com/eugenia1984/React-StarCoding/tree/main/react-avanzado)
 
