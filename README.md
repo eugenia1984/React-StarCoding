@@ -36,7 +36,7 @@ Temas:
 5. Jest & React Testing Library
 6. Manejo de errores
 
-:computer: -> [**challenge**](https://github.com/eugenia1984/React-StarCoding/tree/main/challenge)
+➡️ [**challenge**](https://github.com/eugenia1984/React-StarCoding/tree/main/challenge)
 
 
 ---
