@@ -24,17 +24,17 @@
 
 - Links de interés:
 
-•[https://es.reactjs.org/docs/faq-internals.html](https://es.reactjs.org/docs/faq-internals.html)
+• [https://es.reactjs.org/docs/faq-internals.html](https://es.reactjs.org/docs/faq-internals.html)
 
-•[https://nodejs.org/es/about/](https://nodejs.org/es/about/)
+• [https://nodejs.org/es/about/](https://nodejs.org/es/about/)
 
-•[https://damiandeluca.com.ar/como-usar-la-terminal-integrada-de-visual-studio-code](https://damiandeluca.com.ar/como-usar-la-terminal-integrada-de-visual-studio-code)
+• [https://damiandeluca.com.ar/como-usar-la-terminal-integrada-de-visual-studio-code](https://damiandeluca.com.ar/como-usar-la-terminal-integrada-de-visual-studio-code)
 
-•[https://desarrolloweb.com/articulos/que-es-una-spa.html](https://desarrolloweb.com/articulos/que-es-una-spa.html)
+• [https://desarrolloweb.com/articulos/que-es-una-spa.html](https://desarrolloweb.com/articulos/que-es-una-spa.html)
 
 ### 1.1 - Introducción a React
 
-- React JS fue creado por **Jordan Walke**, un ingeniero de software en **Facebook**(ahora Meta).
+- React JS fue creado por **Jordan Walke**, un ingeniero de software en **Facebook** (ahora  **Meta**).
 
 - React intenta ayudar a los dearrolladores a **construir aplicaciones que usan datos que cambian todo el tiempop**. Su objetivo es ser **sencilla**, **declarativa** y **fácil de combinar**.
 
@@ -48,7 +48,7 @@ React detecta los **cambios** de los valores de los **componentes** y decide si 
 
 Para establecer esa seguridad, requiere que los datos y los cambios se provoquen de una manera específica con dos características...
 
-... **unidireciconalidad**, **de arriba hacia abajo**, las **props** (de compoennte padre a componente hijo) y los **Callbacks** (eventos, desde los componentes hijos hacia los padres)
+... **unidireccionalidad**, **de arriba hacia abajo**, las **props** (de componente padre a componente hijo) y los **Callbacks** (eventos, desde los componentes hijos hacia los padres)
 
 - ¿Qué es el **virtual DOM**?
 
@@ -60,15 +60,20 @@ Es sí resulta ser todo lo que React hace con el Virtual DOM: **una representaci
 
 - ¿ Qué es **node.js**?
 
-Es un entorno de ejecución de JavaScript que permite ser ejecutado en la computadora, fuera del navegador, gracias al motor v8.
+Es **un entorno de ejecución de JavaScript que permite ser ejecutado en la computadora, fuera del navegador**, gracias al **motor v8**.
 
-Con nodejs podemos **instalar módulos** y así utulizar las **librerías** con sus módulos adicionales, gracias a **npm** (**node package manager**).
+Con nodejs podemos **instalar módulos** y así utilizar las **librerías** con sus módulos adicionales, gracias a **npm** (**node package manager**).
 
 Se descarga desde [https://nodejs.org/en/](https://nodejs.org/en/), siempre la versión **LTS**
 
-Para asegurarnos de que tenemos Nodejs instalado, desde la consola: ` node --version`, si nos da la version es que ya la tenemos.
+Para asegurarnos de que tenemos Nodejs instalado, desde la consola: 
 
-Además de tener **Node.js** debemos tener **npm**, asi que también por consola hacemos: `npm --version`, si nos da el número de la versión es que se instaló bien.
+``` node --version``` -> si nos da la version es que ya la tenemos.
+
+Además de tener **Node.js** debemos tener **npm**, asi que también por consola hacemos: 
+
+```npm --version``` -> si nos da el número de la versión es que se instaló bien.
+
 
 ### 1.3 - Creación de nuestra primer create-react-app
 
@@ -78,9 +83,10 @@ Además de tener **Node.js** debemos tener **npm**, asi que también por consola
 
 - Segundo: abro la terminal y me situo dentro de la carpeta.
 
-- Tercero: creo la app con: `npm create-react-app my-app` para crear la primer app, **my-app** es el nombre de la aplicación.
+- Tercero: creo la app con: ```npm create-react-app my-app``` para crear la primer app, **my-app** es el nombre de la aplicación.
 
-- Cuarto: entro a la carpeta `cd my-app` y corro mi proyecto con: `npm start`.
+- Cuarto: entro a la carpeta ```cd my-app``` y corro mi proyecto con: ```npm start```.
+
 
 ##### Estructura del proyecto
 
@@ -99,31 +105,35 @@ package-lock.json
 
 `>public` -> `index.html` con el `<div id="root></div>` donde se va a renderizar toda la aplicación.
 
+
 ---
+
 
 ## :star: 2 - Componentes y Eventos
 
+
+
 ### 2.1 - Componentes y componentes de presentación
 
-- Las aplicaciones en react se construyen mediante **componentes**. El potencial de este funcionamiento consiste en que podemso crear aplicaciones completas de manera **modular** y de fácil mantenimiento, a pesar de su complejidad.
+- Las aplicaciones en React se construyen mediante **componentes**. El potencial de este funcionamiento consiste en que podemos crear aplicaciones completas de manera **modular** y de fácil mantenimiento, a pesar de su complejidad.
 
 Ejemplos: navbar, cards, sliders, listados, footer, formularios, pop-up, titulos, texto, imagenes.
 
-- Los componentes permiten separar la **interfaz de usuario (UI)** es **piezas independientes**, **reutilizables** y pensar en cada pieza de forma aislada.
+- Los componentes permiten separar la **interfaz de usuario (UI)** es **piezas independientes**, **reutilizables** y **pensar en cada pieza de forma aislada**.
 
 - Al desarrollar crearemos componentes para **resolver pequeños problemas** que son fáciles de visualizar y comprender. Luego unos componentes se apoyarán en otro para solucionar problemas mayores y al final **la aplicación será un conjunto de componentes que trabajan entre sí**. Este modo de trabajo tiene varias ventajas, como la **facilidad de mantenieminto**, **depuración**, **escalabilidad**, etc.
 
 - **Beneficios**:
 
--Favorece la separación de responsabiliades, cada componente debe tener una única tarea.
+-Favorece la **separación de responsabiliades**, **cada componente** debe tener **una única tarea**.
 
--Al tener la lógica dle estado y los elementos visuales por separado, es más fácil reutilizar los componentes.
+-Al tener la **lógica del estado** y los **elementos visuales** por **separado**, es más fácil **reutilizar** los componentes.
 
--Se simplifica la tarea de hacer pruebas unitarias.
+-Se simplifica la tarea de hacer **pruebas unitarias**.
 
--Puede mejorar el rendimiento de la aplicación.
+-Puede mejorar el **rendimiento** de la aplicación.
 
--La aplicación es más fácil de entender.
+-La aplicación es **más fácil de entender**.
 
 - En React existen dos maneras de entender los componentes, que varían según desde dónde nos paremos para analizarlo. Vamos a decir que existen **tipos de componentes** y **patrones**:
 
@@ -151,17 +161,20 @@ const Input = (props) => {
 
 ![image](https://user-images.githubusercontent.com/72580574/208733287-e1e1fec9-877f-48db-b930-6d7895f50158.png)
 
+
 ### 2.2 - Componentes contenedores
 
 - Tienen el propósito de **encapsular a otros componentes** y **proporcionarles las propiedades** que necesitan. Además se encargan de **modificar el estado** de la aplicación para que el usuario vea el cambio en los datos (por eso son también llamados **state components**).
 
 ![image](https://user-images.githubusercontent.com/72580574/208733213-cb0caf2e-767a-4afd-9eb5-7f70d0ceab75.png)
 
-- Para leer:
+-> :book: Para leer...
 
-[https://es.reactjs.org/docs/components-and-props.html](https://es.reactjs.org/docs/components-and-props.html)
+... [https://es.reactjs.org/docs/components-and-props.html](https://es.reactjs.org/docs/components-and-props.html)
 
-[https://es.reactjs.org/docs/introducing-jsx.html](https://es.reactjs.org/docs/introducing-jsx.html)
+... [https://es.reactjs.org/docs/introducing-jsx.html](https://es.reactjs.org/docs/introducing-jsx.html)
+
+
 
 ### 2.3 - Eventos
 
@@ -169,11 +182,14 @@ La utilización de **eventos** se similar al HTML/JS normal, la única diferenci
 
 Otra diferencia es que no hay que poner los **()**, sino apenas se carga el componente se llama a la función y no solo si se hace click.
 
-Si necesito enviar un parametro: `onClick={(event)=> {myFunction(event, param)}}  `
+Si necesito enviar un parametro: 
+```JSX
+onClick={(event)=> {myFunction(event, param)}} 
+```
 
 Para tomar el valor, es con **event.target.value**.
 
-Nos ajudan a **settear estados**(set state).
+Nos ajudan a **settear estados**(```setState```).
 
 Ejemplo en código:
 
@@ -197,13 +213,15 @@ export default function App() {
 
 ---
 
+
 ## :star: 3 - Hooks
+
 
 ### 3.1 - Hooks
 
 Todas las **constantes** o **Variables** que declare para intentar mantener el **estado** morirán y serán reiniciadas en cada **render**.
 
-Los **hooks** agarran esa información, la guardan en el estado, y esos valores son dinímicos, al modificarse, ejecutan una función y vuelven a renderizar el componente.
+Los **hooks** agarran esa información, la guardan en el estado, y esos valores son dinámicos, al modificarse, ejecutan una función y vuelven a renderizar el componente.
 
 Ejemplo en código:
 
@@ -223,17 +241,23 @@ function FnApp() {
 }
 ```
 
+
 ### 3.2 - ¿Qué son los hooks?
+
 
 - **useState** es un hook para manejar el **state**(estado) de un componente.
 
-Para poder utilizarlo hay que **importarlo**: `import {useState} from "react";`
+Para poder utilizarlo hay que **importarlo**: 
+```JSX
+import {useState} from "react";
+```
 
+Se declara una variable, el setVariable que va a actualizarlo y con el **useState** le damos el **valor inicial**:
 ```JSX
 const [ name, setName ] = useState("Valor inicial");
 ```
 
-devuelve un array:
+-> Devuelve un array:
 
 [0] => valor(ref)
 
@@ -243,18 +267,21 @@ Debe ejecutarse **siempre**. No pueden ser ejecutados dentro de otras estructura
 
 En el componente padre puedo pasar como prop la función que me va a actualizar el estado, asi tengo la logica en el componente padre y no en el hijo, el hijo recibe la función como prop y va a poder ejecutarla en el evento sintético. Utilizamos una función callback.
 
-#### ¿ Qué son los hooks?
+### ¿ Qué son los hooks?
 
 Los React hooks permiten la construcción de componentes muchos más limpios y reutilizables, sin la necesidad de escribir componentes dentro de las clases.
 
-#### Hooks vs. Clases
+
+### Hooks vs. Clases
 
 Los **hooks** son una implementación que viene a **reemplazar la utilización** de las funciones dentro de un **componente funcional**, como puede ser **ComponentDidMount**, para que los componentes basados en funciones puedan respetar el mismo comportamiento. Es una de las mejoras que se implementaron en
 React.
 
 ComponentDidMount ---> **useEffect** (ya el componente esta renderizado y esta por morir)
 
-#### Hooks personalizados
+
+
+### Hooks personalizados
 
 ```JSX
 import React, {useState, useEffect } from "reac";
@@ -284,9 +311,12 @@ function useFriendStatus(frinedID) {
 
 ---
 
+
 ## :star: 4. Miscelaneos
 
+
 ### 4.1 - Ciclos de vida
+
 
 En React es fundamental el ciclo de vida, porque hay determinadas **acciones que necesariamente debemos realizar en el momento correcto de ese ciclo**.
 
@@ -300,9 +330,13 @@ El componente **nace** (se crea), **cambia su valor** y **muere**. Es decir hay 
 
 - el **Desmontaje** se produce cuandoel componente se elimina del DOM.
 
-#### ¿Cómo sabemos que ciclo de vida tiene?
+
+
+### ¿Cómo sabemos que ciclo de vida tiene?
+
 
 Podemos utilizar el hook **useEffect** para poder controlar y saber que ciclo de vida tiene nuestro componente.
+
 
 Por ejemplo, al montar un componente traigo los datos de la base de datos y al renderizarse ya lo muestro.
 
@@ -322,6 +356,9 @@ El useEffect tiene dos parámetros...
 
 undefined => useEffect(() => Mount y en cada render)
 
+
+- Ejemplo en código:
+
 ```JSX
 useEffect( () => {
     // para cuando se esta por montar el componente
@@ -333,13 +370,17 @@ useEffect( () => {
   }, [])
 ```
 
-Para leer [https://es.reactjs.org/docs/state-and-lifecycle.html](https://es.reactjs.org/docs/state-and-lifecycle.html)
+-> :book: Para leer : [https://es.reactjs.org/docs/state-and-lifecycle.html](https://es.reactjs.org/docs/state-and-lifecycle.html)
+
 
 ### 4.2 - Técnicas de rendering
 
+
 En vez de un **forEach** utilizamos un **map()**, que nos va a retornar lo que estamos recorriendo. Siempre que recorremos con map hay que agregar la **key** a cada elemento que se renderice, asi React lo puede seguir y comparar para ver si se cambio.
 
+
 ---
+
 
 ## :star: 5 - Apis
 
@@ -349,7 +390,7 @@ En vez de un **forEach** utilizamos un **map()**, que nos va a retornar lo que e
 
 - con request **ajax**
 
-- con **\*axios**
+- con **axios**
 
 - Con **fetch()** que nos devuelve la promesa(por eso se usa el **.then()**), ejemplo en código:
 
@@ -363,7 +404,7 @@ fetch("https://api.ejemplo/id/1202")
   })
 ```
 
-Se puede usar del modo asíncrono con **Async** - **await**.
+Se puede usar del modo asíncrono con **async** - **await**.
 
 - Para este mini e-commerce vamos a utilizar la API de Mercado Libre: [https://api.mercadolibre.com/sites/MLA/search](https://api.mercadolibre.com/sites/MLA/search)
 
@@ -393,37 +434,54 @@ El **useEffect** con el llamado queda asi:
   }, []);
 ```
 
+
 #### Así va quedando:
+
 
 ![image](https://user-images.githubusercontent.com/72580574/208918386-7975d601-4e53-4b78-a533-819984097798.png)
 
+
 ### 5.2 - Context
+
 
 Dado que React funciona con un flujo de datos **unidireccional** (**hay una sola fuente de verdad**), la única manera de transmitir datos es vía **props** (de componente padre a componente hijo)
 
+
 ![image](https://user-images.githubusercontent.com/72580574/208936723-8f7f81ec-38db-46e3-91e0-2c4e70a5a3bf.png)
+
 
 Los **contextos** también pueden ser alterados en **tiempo de ejecución** y sus efectos **propagados** al resto de los **consumidores**(**consumer**).
 
+
 contexto -> guarda información global de la app, asi no hay que pasarla por props entre el componente bisabuelo / abuelo / padre / hijo.
+
 
 Creamos un **contexto** que va a ser el **proveedor**(**provider**) de la información.
 
+
 Lo importante al configurar esta estrategia será:
+
 
 - Saber **elegir** cuál es el **punto estratégico** de mmi apllicación donde iniciaré el **estado** de ese **context**.
 
+
 - **Combinarlo** estratégicamente con un **useState** para poder **mutarlo** y que el useState me ayude a hacer **trigger de renderings** en **consumers**.
+
 
 - Ejemplo en codigo: **CacheContext** es la variable que se encarga de mantener todos los valores globales en la aplicación:
 
+
 ![image](https://user-images.githubusercontent.com/72580574/208947355-95aba572-17b0-4c9e-a529-6b4c1dea4276.png)
+
 
 - Como vemos en **ComponentA2**, par apoder usar la información del **context**, tenemos que usar el **hook** de **useContext(nombreDelContext)**.
 
+
 ![image](https://user-images.githubusercontent.com/72580574/208948177-cbe813f3-0945-423d-b2a7-ab9060088192.png)
 
+
 -> En nuestro proyecto creamos : **context** > **EcommerceContext.jsx**:
+
 
 Entonces mi **componente provider**:
 
@@ -455,6 +513,7 @@ export const EcommerceProvider = ({ children }) => {
 };
 ```
 
+
 Y mi **componente consumer**:
 
 ```JSX
@@ -475,29 +534,39 @@ function App() {
 export default App;
 ```
 
+
 Y gracias a los **children** todos los componentes hijos van a tener a dispocisión el listado de productos.
 
+
 Ahora en **ProductsContainer** tengo que aplicar el hook **useContext**:
+
 
 ```JSX
 const { products } = useContext(EcommerceContext);
 ```
 
-:tv: -> Para leer [https://es.reactjs.org/docs/context.html](https://es.reactjs.org/docs/context.html)
+
+-> :book:  Para leer [https://es.reactjs.org/docs/context.html](https://es.reactjs.org/docs/context.html)
+
 
 ---
 
+
 ## :star: 6 - Navegación
 
+
 ### 6.1 - Routing
+
 
 - ¿Cuál es el punto de inicipio de nuestra aplicación?
 
 Un ejemplo: Login -> Home
 
+
 - ¿Cómo vamos a organizarlo?
 
 inicio -> búsquedas -> detalle -> confirmación -> fin
+
 
 - Por defecto React no viene con un mecanismo integrado de navegación. Esto es para mantener sus dependencias al **mínimo** y dado que **no todo proyecto necesita routing**, se maneja como una dependencia aparte. Hay varias soluciones, vamos a trabajar con [react-router-dom](https://www.npmjs.com/package/react-router-dom)
 
@@ -513,6 +582,7 @@ Esta es la página: [https://reactrouter.com/en/main](https://reactrouter.com/en
 import { BrowserRouter } from "react-router-dom";
 ```
 
+
 2. En vuelvo mi `<App />` en el **BrowserRouter** :
 
 ```JSX
@@ -521,11 +591,13 @@ import { BrowserRouter } from "react-router-dom";
   </BrowserRouter>
 ```
 
+
 3. En **App.js** voy a armar todoas mis rutas, para lo cual necesito importarlas:
 
 ```JSX
 import { Routes, Route } from "react-router-dom";
 ```
+
 
 4. Y encierro mi **App** entre las **Routes** para luego adentro mediante **Route** voy a ir definiendo que componentes renderizar acorde al path de la URL de mi app.
 
@@ -583,21 +655,30 @@ const { search } = useParams();
 
 -> Si tengo una **ruta dinamica** el parametro siempre va con **:** adelante (lo que indica es dinamico, es una variable).
 
+
 ### 6.4 - Rutas dinámicas y contenido
+
 
 Me va quedando asi:
 
+
 ![image](https://user-images.githubusercontent.com/72580574/209558097-9a9595de-6551-4aed-94d1-0240ee6ae6a5.png)
+
 
 ---
 
+
 ## :star: 7 - El store: Redux
+
 
 ## ¿ Qué es Redux ?
 
+
 Es una herramienta que nos sirve para **gestionar estados de toda nuestra aplicación**, se puede considerar como una estepcie de **Estados GLobales**. Es una herramienta muy similar a **Context**
 
+
 ### 7.1 - Filtrando estados
+
 
 ## ¿ Cómo funciona ?
 
@@ -618,13 +699,16 @@ npm install @redux/toolkit
 
 :computer: -> [Pagina web: https://react-redux.js.org/](https://react-redux.js.org/)
 
+
 ### 7.2 - Introducción a Redux - configuración
+
 
 ### Primeros pasos : crear nuestro Store
 
-Creamos una carpeta dentro de src que se llame **Redux**.
 
-Dentro creamos otro directorio que se llame **Store** y dentro de nuestro archivo **index.js** -> `src > redux > store > index.js`:
+- Creamos una carpeta dentro de src que se llame **Redux**.
+
+- Dentro creamos otro directorio que se llame **Store** y dentro de nuestro archivo **index.js** -> `src > redux > store > index.js`:
 
 ```JSX
 import { createStore } from "@redux/toolkit";
@@ -632,7 +716,7 @@ import { createStore } from "@redux/toolkit";
 // nuestro store ira aca
 ```
 
-La estructora va a ser:
+- La estructura va a ser:
 
 ```
 > src
@@ -642,15 +726,16 @@ La estructora va a ser:
      > store
 ```
 
+
 ### Primeros pasos: agregar nuestro Proveedor
 
-Al igual que context, necesitamos decirle a nuestra aplicación cuál es el punto de partida de la nformación. Para lograr esto, desde el archivo index.js (arhivo principal) le añadimos:
+- Al igual que context, necesitamos decirle a nuestra aplicación cuál es el punto de partida de la nformación. Para lograr esto, desde el archivo index.js (arhivo principal) le añadimos:
 
 ```JSX
 <Provider store={Store} />
 ```
 
-Recordá que el store es el archivo que creamos en el paso anterior.
+- Recordá que el store es el archivo que creamos en el paso anterior.
 
 ```JSX
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -665,13 +750,14 @@ root.render(
 );
 ```
 
+
 ### Creando Reducers
 
-Los **reducers** son funciones que se encargan de informar al store sobre que cambio de estado debe efectuarse. Esa información vendrá desde las **Actionas**(acciones).
+- Los **reducers** son funciones que se encargan de informar al store sobre que cambio de estado debe efectuarse. Esa información vendrá desde las **Actionas**(acciones).
 
-Para nuestro crrtio, creamos un reductor son su **initial_state**(estado inciial).
+- Para nuestro crrtio, creamos un reductor son su **initial_state**(estado inciial).
 
-Los reducers deberían ir dentro de la carpeta **redux** de esta manera: `src > reducers > cartReducer.js `
+- Los reducers deberían ir dentro de la carpeta **redux** de esta manera: `src > reducers > cartReducer.js `
 
 ```JSX
 const INITIAL_STATE = {
@@ -691,7 +777,8 @@ export const cartReducer = (state = INITIAL_STATE, action) => {
 }
 ```
 
-Esta función que se va a exportar tiene dos parametros...
+
+- Esta función que se va a exportar tiene dos parametros...
 
 ... **state** es estado inicial
 
@@ -699,11 +786,12 @@ Esta función que se va a exportar tiene dos parametros...
 
 **payload** es el valor que le vamos a enviar
 
+
 ### Combinando Reducers
 
-Es normal que en una aplicación tengamos más de un reducer, y para que redux pueda yilizarlo, necesitamos combinarlos.
+- Es normal que en una aplicación tengamos más de un reducer, y para que redux pueda utilizarlo, necesitamos combinarlos.
 
-Este archivo de debería encontrar en: `src > redux > reducers > index.js`
+- Este archivo de debería encontrar en: `src > redux > reducers > index.js`
 
 ```JSX
 import { combineReducers } from "redux";
@@ -714,11 +802,12 @@ export default combineReducers({
 })
 ```
 
-**combineReducers** combina todas las funciones reductoras.
+- **combineReducers** combina todas las funciones reductoras.
+
 
 ### Creando Actions
 
-Como dijimos, las acciones se encargan de decirle a redux que tipo de acción se está por ejecutar y que valores se deben trabajar (payload). En nuestro caso, el payload, va a ser el nuevo elemento a guardar en el carrito.
+- Como dijimos, las acciones se encargan de decirle a redux que tipo de acción se está por ejecutar y que valores se deben trabajar (payload). En nuestro caso, el payload, va a ser el nuevo elemento a guardar en el carrito.
 
 ```JSX
 export const addElementCart = (product) => ({
@@ -727,11 +816,12 @@ export const addElementCart = (product) => ({
 })
 ```
 
-Esto va en `src > redux > actions`.
+-> Esto va en `src > redux > actions`.
+
 
 ### Modificando Store
 
-Una vez que tengamos los reducers y los actions, lo único que nos queda es importar en el **Store** todos los reducers combinándolos de esta manera:
+- Una vez que tengamos los reducers y los actions, lo único que nos queda es importar en el **Store** todos los reducers combinándolos de esta manera:
 
 ```JSX
 import { createStore } from "react-redux";
@@ -740,19 +830,21 @@ import Reducers from "../reducers/index";
 export const Store = createStore(Reducers);
 ```
 
-Todo esto en `src > redux > store > index.js`
+-> Todo esto en `src > redux > store > index.js`
+
 
 ### 7.3 - Consumiendo store - useSeletor
 
+
 ### ¿Cómo conusmimos esos datos?
 
-Nuevamente gracias a los hooks, podemos utilizar **useSelector** y **useDispatch** para poder traer y modificar datos.
+- Nuevamente gracias a los hooks, podemos utilizar **useSelector** y **useDispatch** para poder traer y modificar datos.
 
-**useSelector** -> para traer el estado.
+- **useSelector** -> para traer el estado.
 
-**useDispatch** -> para actualizar el estado.
+- **useDispatch** -> para actualizar el estado.
 
-En **App.js**:
+- En **App.js**:
 
 1. importo:
 
@@ -766,15 +858,18 @@ import { useSelector } from "react-redux";
 const STATE = useSelector((state) => state.cartReducer);
 ```
 
+
 ### 7.4 - Actualizamos nuestro store -useDispatch
+
 
 ### ¿Y cómo lo actualizamos?
 
-El hook **useDipatch** permite actualizar el estado del store mediante un reducer. Un ejemplo:
+- El hook **useDipatch** permite actualizar el estado del store mediante un reducer. Un ejemplo:
 
 -> cada vez que el store modifica sus calores, se refleja en la vista automáticamente.
 
-En **App.jsx**:
+
+- En **App.jsx**:
 
 1. Lo importo:
 
@@ -782,17 +877,20 @@ En **App.jsx**:
 import { useDispatch, useSelector } from "react-redux";
 ```
 
+
 2. Lo utilizo:
 
 ```JSX
 const dispatch = useDispatch();
 ```
 
+
 3. importo:
 
 ```JSX
 import { addElementToCart } from "./redux/actions/cart";
 ```
+
 
 4. Lo utilizo en un boton:
 
@@ -814,29 +912,39 @@ import { addElementToCart } from "./redux/actions/cart";
   );
 ```
 
+
 ---
 
 :computer: -> [repositorio de Start Coding](https://github.com/CristianHourcade/ReactBasic)
 
 ---
 
+
 ## :star: 8 - Forms
 
-En el curso en realidad es otra aplicación separada, pero para tener todo jutno voy a crear otra opción en la barra de navegación para poder ver el formulario y practicar esta parte.
+- En el curso en realidad es otra aplicación separada, pero para tener todo jutno voy a crear otra opción en la barra de navegación para poder ver el formulario y practicar esta parte.
+
 
 ![image](https://user-images.githubusercontent.com/72580574/209573842-65f2291c-26a6-42d3-b90a-0c4b9514bdf6.png)
 
+
 ### 8.1 - Introducción a forms
+
 
 - Vamos a utilizar [**formik**](https://formik.org/)
 
+
 - Instalación de **formik**: `npm install formik --save` ó `npm i formik --save`
+
 
 - También vamos a utilizar [**YUP**](https://www.npmjs.com/package/yup)
 
+
 - Instalación de **YUP**: `npm install yup` ó `npm i yup`
 
+
 - Para los estilos va a utilizar **Styled components**, se instala con : `npm install styled-components `
+
 
 Para poder utilizarlos debo importarlos:
 
@@ -845,9 +953,12 @@ import { Formik } from "formik";
 import * as Yup from "yup";
 ```
 
+
 Al **form** lo paso al componente de formik: `<Formik></Formik>` al cual deno setearle los **valores iniciales**: ` <Formik initialValues={{ name: "", id: "", phone: "", email: "", password: "" }}>`
 
+
 Cada uno de los **input** van a tener el atributo `name` que van a coincidir con los que paso como **initialValues**
+
 
 Un input como ejemplo:
 
@@ -860,11 +971,15 @@ Un input como ejemplo:
 />
 ```
 
+
 ### 8.2 - Validaciones básicas
+
 
 En `<Formik>` también vamos a tener **validationSchema={ RegisterSchema }**
 
+
 Y **RegisterSchema** es otro archivo aparte que va a tener justamente las validaciones de **Yup**:
+
 
 ```JSX
 import * as Yup from "yup";
@@ -881,25 +996,37 @@ export const RegisterSchema = Yup.object().shape({
 });
 ```
 
+
 **.string()** -> para validar que el valor del input sea de tipo string
+
 
 **.number()** -> para validar que el valor del input sea de tipo number
 
+
 **.required()** -> el input es requerido (obligatorio).
+
 
 **.email()** -> para validar que sea email, es decir que tenga **@** y un **.**.
 
+
+
 ### 8.3 - Validaciones avanzadas
+
 
 Para que no me aparezcan todos los mensajes de error juntos.
 
+
 Dentro de `<Formik />` agrego **validateOnBlur**
+
 
 Y en el `<input />` agrego : **onBlur={handleBlur("name")}**
 
+
 De Yup también voy a utilizar **touched**, si tocamos el campo (input) y tiene un error, entonces me lo muestra, etonces voy a tener: `{touched.id && errors.id && <p>{errors.id}</p>}`.
 
+
 Y el **botón de registro** debe ser de tipo **submit**:
+
 
 ```JSX
 <div className="btn-register">
@@ -907,15 +1034,23 @@ Y el **botón de registro** debe ser de tipo **submit**:
 </div>
 ```
 
+
+
 ### 8.4 - Validaciones onSubmitBlur
+
 
 En vez de utilizar **validateOnBlur** podemos usar **validateOnSubmit** . Para ello debo tener en vez de un **div**, un **form** para poder usar **\*onSubmit**: `<form onSubmit={handleSubmit}>`.
 
+
 Otro tipo de validación es **validateOnChange** me va a ir chequeando por cada vez que ingrese un dato.
+
+
 
 ### 8.5 - useFormik
 
+
 Es un custom hook (**useFormik**) que trae Formik.
+
 
 Le enviamos al hook:
 
@@ -946,6 +1081,7 @@ Y a través de **props** recibimos del hook:
   touched,
 }
 ```
+
 
 Por lo que al momento tenemos creado el formulario ocn el componente **Formik**:
 
@@ -1086,23 +1222,31 @@ const formik = useFormik({
   });
 ```
 
+
 Y para no estar poniendo todo con **formik.** desestructuro:
 
 ```JSX
 const { handleSubmit, handleChange, touched, errors, values } = formik;
 ```
 
+
 Y en los **hanldeChange** no es necesario le pase entre los () a que campo me refiero.
+
+
 
 ### 8.6 - RegEx
 
 Una **expresión regular** es una cadena de caracteres que es utilizada para describir o encontrar patrones (matchear) dentro de otros strings, en base al uso de delimitadores y ciertas reglas de sintaxis.
 
+
 [regexpal.com](https://www.regexpal.com)
+
 
 **?** -> es opcional
 
+
 **{3}** -> Tiene 3, el número que le pongo entre las {} es la cantidad exacta
+
 
 **{3,6}** -> Tiene de 3 a 6, aca le indico un rango de cantidad posible
 
