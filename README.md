@@ -15,9 +15,9 @@ Realicé dos cursos junto a **StarCoding** de **React**:
 7. El store(Redux)
 8. Forms
 
-:computer: [Demo](https://react-basico-start-coding.netlify.app/)
+➡️ [Demo](https://react-basico-start-coding.netlify.app/)
 
-:arrow: [Certificado](https://github.com/eugenia1984/React-StarCoding/blob/main/certificado_react_basico.pdf)
+➡️ [Certificado](https://github.com/eugenia1984/React-StarCoding/blob/main/certificado_react_basico.pdf)
 
 - [**React Avanzado**](https://github.com/eugenia1984/React-StarCoding/tree/main/react-avanzado)
 
