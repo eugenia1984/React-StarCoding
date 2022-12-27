@@ -85,8 +85,33 @@ Dentro de `src` > `containers` me voy a crear las tres carpetas para las página
 
 ### :star: 1.3 - Routing
 
-Usamos [react-router-dom](https://reactrouter.com/en/main) y vemos [react-router-dom npm](https://www.npmjs.com/package/react-router-dom), que lo instalamos con ```npm i react-router-dom```
+Usamos [react-router-dom](https://reactrouter.com/en/main) y vemos [react-router-dom npm](https://www.npmjs.com/package/react-router-dom), que lo instalamos con `npm i react-router-dom`
 
+-> lo importo: `JSX  import { BrowserRouter } from "react-router-dom"; `
+
+-> encierro mi App:
+
+```JSX
+function App() {
+  return (
+    <BrowserRouter>
+      <div className="App">Hola soy una app</div>
+    </BrowserRouter>
+  );
+}
+```
+
+-> Dentro tengo al componente `<Routes>` y dentro a `<Route /> ` con el `path` y el `element` (componente a renderizar).
+
+Como en el video lo hacen con react-router-dom version 5 en vez de `<Routes>` tienen `<Switch>` y el ``<Route /> ` tiene **component** en vez de **element**.
+
+Y para mostrar el detalle del producto tengouna **ruta dinámica**:
+
+```JSX
+<Route path="/product/:id" element={<DetailContainer />} />
+```
+
+Como extra puedo hacer un path a "*" para que cualquier otra cosa que toquen me lleve en vez de a un error a una UI que tenga las opciones de a donde ir o me devuelva la home.
 ### :star: 1.4 - Estados y técnicas de rendering
 
 ### :star: 1.5 - useParams
