@@ -17,6 +17,15 @@ Temas:
 
 ---
 
+
+### <img src="https://img.icons8.com/windows/32/null/strategy-board.png"/> Challenge:
+
+Crear una app sencilla, con 3 pantallas para repasar todos los conceptos vistos hasta el momento, con: home -> listado de productos -> detalle producto
+
+:computer: -> [se puede ver en **challenge**](https://github.com/eugenia1984/React-StarCoding/tree/main/challenge)
+
+---
+
 ## :star2: 1. Introducción
 
 ### :star: 1.1 - Introoducción teórica
@@ -69,11 +78,6 @@ PAra crear el Contet hay que crear un componente que se va a encargar de ser el 
 
 renderiza el provider con los children adentro, cada vez que el provider se actualice se actualizan sus childrens. Asi manejamos los **estados globales**
 
-### <img src="https://img.icons8.com/windows/32/null/strategy-board.png"/> Challenge:
-
-Crear una app sencilla, con 3 pantallas para repasar todos los conceptos vistos hasta el momento, con: home -> listado de productos -> detalle producto
-
-:computer: -> [se puede ver en **challenge**](https://github.com/eugenia1984/React-StarCoding/tree/main/challenge)
 
 ### :star: 1.2 - Componentes
 
