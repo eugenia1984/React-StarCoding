@@ -21,7 +21,7 @@ Temas:
 
 ➡️ [Certificado](https://github.com/eugenia1984/React-StarCoding/blob/main/certificado_react_basico.pdf)
 
-<img src="https://user-images.githubusercontent.com/72580574/209708680-7c52dee0-e8bd-4d90-987e-062188dd42f2.png" alt="certificado" width= "400" >
+<img src="https://user-images.githubusercontent.com/72580574/209708680-7c52dee0-e8bd-4d90-987e-062188dd42f2.png" alt="certificado" width= "500" >
 
 
 - [**React Avanzado**](https://github.com/eugenia1984/React-StarCoding/tree/main/react-avanzado)
