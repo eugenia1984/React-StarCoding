@@ -17,7 +17,6 @@ Temas:
 
 ---
 
-
 ### <img src="https://img.icons8.com/windows/32/null/strategy-board.png"/> Challenge:
 
 Crear una app sencilla, con 3 pantallas para repasar todos los conceptos vistos hasta el momento, con: home -> listado de productos -> detalle producto
@@ -78,7 +77,6 @@ PAra crear el Contet hay que crear un componente que se va a encargar de ser el 
 
 renderiza el provider con los children adentro, cada vez que el provider se actualice se actualizan sus childrens. Asi manejamos los **estados globales**
 
-
 ### :star: 1.2 - Componentes
 
 - **components** de presentación, la vista
@@ -115,14 +113,144 @@ Y para mostrar el detalle del producto tengouna **ruta dinámica**:
 <Route path="/product/:id" element={<DetailContainer />} />
 ```
 
-Como extra puedo hacer un path a "*" para que cualquier otra cosa que toquen me lleve en vez de a un error a una UI que tenga las opciones de a donde ir o me devuelva la home.
+Como extra puedo hacer un path a "\*" para que cualquier otra cosa que toquen me lleve en vez de a un error a una UI que tenga las opciones de a donde ir o me devuelva la home.
+
 ### :star: 1.4 - Estados y técnicas de rendering
+
+- Para los **State** uso el **useState** y el setVariable.
+
+- Para mostrar los productos utilizo el **.map()**
+
+```JSX
+import React, { useState } from "react";
+import { LIST } from "../../international";
+import Title from "../../components/title/Title";
+import { Link } from "react-router-dom";
+import "./style.css";
+
+const ListContainer = () => {
+  const list = [
+    { id: 1, name: "shoes", price: 3000 },
+    { id: 2, name: "shirt", price: 2600 },
+    { id: 3, name: "t-shirt", price: 1900 },
+  ];
+
+  const [products, setProducts] = useState(list);
+
+  return (
+    <div className="container">
+      <Title text={LIST.title} />
+      <section className="product-list">
+        {products.map((element, index) => {
+          return (
+            <div key={index} className="product-card">
+              <p>
+                <strong>{element.name}</strong>
+              </p>
+              <p>
+                Precio: <a href="/"> $ {element.price}</a>
+              </p>
+              <Link
+                to={`/product/${element.id}`}
+                className="cta-link"
+                alt={element.name}
+              >
+                {LIST.text}
+              </Link>
+            </div>
+          );
+        })}
+      </section>
+    </div>
+  );
+};
+
+export default ListContainer;
+```
 
 ### :star: 1.5 - useParams
 
+Como la URL que muestra el detalle del producto es dinámica, acorde al **parametro** (**id del producto**) que recibe es el producto que muestra, hay que usar el hook: **useParams**.
+
+1. importo: `JSX import { useParams } from "react-router";`
+
+2. agarro el id que recibo por la URL: `JSX    const  { id } = useParams();`
+
+3. lo usare con **context**.
+
 ### :star: 1.6 - useContext
 
+Dentro de `src` creo la carpeta `context` y dentro el archivo **Cart.jsx**.
+
+Tengo que ...
+
+... crear el contexto en una constante / variable
+
+... crear un componente que va a exportar(retornar) esa creación del contexto y se convietrte en el componente proveedor.
+
+En el ListContainer tenia el estado dle listado, pero deberia estar en el context, me lo traigo de ahi.
+
+```JSX
+import React, { createContext, useState }  from "react";
+
+export const CartContext = createContext();
+
+export const CartProvider = ({children}) => {
+  const list = [
+    { id: 1, name: "shoes", price: 3000 },
+    { id: 2, name: "shirt", price: 2600 },
+    { id: 3, name: "t-shirt", price: 1900 },
+  ];
+
+  const [ listProducts, setListProducts ] = useState(list);
+
+  return (
+    <CartContext.Provider value={{ listProducts}}> {children}</CartContext.Provider>
+  );
+}
+```
+- Tenemos que englobar la App con este context para poder usarlo.
+
+1. Lo importo: ```JSX import { CartProvider } from "./context/Cart.jsx";```
+
+2. Encierro mi App en el ```<CartProvider>```
+
+- Ahora desde **ListContainer** tengo que llamar a ese **context** con el hook **useContext**.
+
+
+```JSX
+const { listProducts } = useContext(CartContext);
+```
+
+Y lo que voy a renderizar mapeando es **listProducts**.
+
 ### :star: 1.7 - UseEffect
+
+Hya que tomar el listado de productos (**listProducts**) que viene del context, filtrarlo, para que en DetailContainer lo mostremos.
+
+Ya tenemos el **id** para poder filtrar el listado de productos.
+
+Ahora hay que traer el contexto: ```JSX const { listProducts} = useContext(CartContext); ```
+
+Filtro el listado de productos por el **id** con el hook ***useEffect** para utilizar el ciclo de vida **componenteDidMount** (una vez que se monta el componente, se ejecuta useEffect).
+
+Voy a traer todo el listado y lo voy a filtrar por el id, recordar que de la URL viene como String y yo tengo el id en Number:
+```JSX
+let result = listProducts.filter((element) => element.id === Number(id));
+```
+
+Y para poder mostrarlo hay que **guardarlo en un estado**:
+```JSX
+const [ product, setProduct ] = useState({});
+```
+
+Lo setteo con el **useEffect**:
+```JSX
+useEffect(() => {
+  let result = listProducts.filter((element) => element.id === Number(id));
+  setProduct(result[0]]
+}, []);
+```
 
 ---
 
