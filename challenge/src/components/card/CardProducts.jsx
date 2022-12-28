@@ -1,24 +1,20 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { LIST } from "../../international";
+import LinkButton from "../linkButton/LinkButton";
 import "./style.css";
 
-const CardProducts = ({  element }) => {
+const CardProducts = ({ element }) => {
   return (
     <div className="product-card">
+      <h2>{element.name}</h2>
       <p>
-        <strong>{element.name}</strong>
+        <strong>Precio:</strong> $ {element.price}
       </p>
-      <p>
-        Precio: <a href="/"> $ {element.price}</a>
-      </p>
-      <Link
+      <LinkButton
         to={`/product/${element.id}`}
-        className="cta-link"
-        alt={element.name}
-      >
-        {LIST.text}
-      </Link>
+        txt={LIST.text}
+        className="btn-link"
+      />
     </div>
   );
 };

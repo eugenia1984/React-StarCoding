@@ -1,9 +1,10 @@
 import React, { lazy, Suspense, useContext } from "react";
-import { LIST } from "../../international";
+import { HOME, LIST } from "../../international";
 import Title from "../../components/title/Title";
 import { CartContext } from "../../context/Cart";
 import CardProduct from "../../components/card/CardProducts";
 import "./style.css";
+import LinkButton from "../../components/linkButton/LinkButton";
 
 const CardProducts = lazy(() => {import("../../components/card/CardProducts.jsx")})
 
@@ -13,6 +14,7 @@ const ListContainer = () => {
 
   return (
     <div className="container">
+      <LinkButton to="/" txt={HOME.textBack} />
       <Title text={LIST.title} />
       <section className="product-list">
         {listProducts.map((element, index) => {

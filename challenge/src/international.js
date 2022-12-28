@@ -1,12 +1,14 @@
 export const HOME = {
   title: "Bienvenidos a la home",
-  textLink: "Ver el listado de productos"
+  textLink: "Ver el listado de productos",
+  textBack: "Volver a la home"
 }
 
 export const DETAIL = {
   description: "No tengo descripción",
   price: "Precio: $ ",
-  btnText: "Comprar"
+  btnText: "Comprar",
+  btnBack: "Volver al listado"
 }
 
 export const LIST = {

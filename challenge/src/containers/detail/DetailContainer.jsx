@@ -1,5 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router";
+import LinkButton from "../../components/linkButton/LinkButton";
+import ProductDescription from "../../components/product/ProductDescription";
 import Title from "../../components/title/Title";
 import { CartContext } from "../../context/Cart";
 import { DETAIL } from "../../international";
@@ -17,20 +19,9 @@ const DetailContainer = () => {
 
   return (
     <div className="detail-product">
+      <LinkButton to="/list" txt={DETAIL.btnBack} />
       <Title text={product.name} />
-      <div className="product-description">
-        <p>
-          <strong>
-            {product.description === ""
-              ? DETAIL.description
-              : product.description}
-          </strong>
-        </p>
-        <p>
-          {DETAIL.price} {product.price}
-        </p>
-        <button className="btn-cta">{DETAIL.btnText}</button>
-      </div>
+      <ProductDescription product={product} />
     </div>
   );
 };
