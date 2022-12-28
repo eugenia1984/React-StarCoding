@@ -28,7 +28,7 @@ Crear una app sencilla, con 3 pantallas para repasar todos los conceptos vistos 
 ![image](https://user-images.githubusercontent.com/72580574/209830223-52e66896-3a1b-454b-9a09-84072ade41a4.png)
 
 
-- Listado de roductos:
+- Listado de productos:
 
 ![image](https://user-images.githubusercontent.com/72580574/209830248-2c648ca3-2ad0-48c4-b1ab-3ecb52f020fa.png)
 
