@@ -58,6 +58,8 @@ Temas:
 
 En [**my-first-app**](https://github.com/eugenia1984/React-StarCoding/tree/main/my-first-app) está la primer práctica de React, que se puede ver [el deploy acá](https://react-basico-start-coding.netlify.app/)
 
+En [**Challenge**](https://github.com/eugenia1984/React-StarCoding/tree/main/challenge) está la segunda práctica de React, para el curso **React Avanzado**, donde repaso lo visto en React Básico, haciendo una SPA con un **Home** que lleva a un **listado de productos** y se puede seleccionar cada uno para ir al **detalle del producto**. Se agrego **lazy loading** y **suspense** al cargar el listado.
+
 ---
 
 ## Por favor: 🎁
