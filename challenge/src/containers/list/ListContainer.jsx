@@ -1,14 +1,15 @@
-import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import React, { lazy, Suspense, useContext } from "react";
 import { LIST } from "../../international";
 import Title from "../../components/title/Title";
 import { CartContext } from "../../context/Cart";
+import CardProduct from "../../components/card/CardProducts";
 import "./style.css";
 
+const CardProducts = lazy(() => {import("../../components/card/CardProducts.jsx")})
+
 const ListContainer = () => {
-  
   const { listProducts } = useContext(CartContext);
-  console.log("Lista de productos que viene del context",listProducts)
+  console.log("Lista de productos que viene del context", listProducts);
 
   return (
     <div className="container">
@@ -16,21 +17,9 @@ const ListContainer = () => {
       <section className="product-list">
         {listProducts.map((element, index) => {
           return (
-            <div key={index} className="product-card">
-              <p>
-                <strong>{element.name}</strong>
-              </p>
-              <p>
-                Precio: <a href="/"> $ {element.price}</a>
-              </p>
-              <Link
-                to={`/product/${element.id}`}
-                className="cta-link"
-                alt={element.name}
-              >
-                {LIST.text}
-              </Link>
-            </div>
+            <Suspense fallback={<div>Cargando...</div>} key={index}>
+              <CardProduct index={index} element={element} />
+            </Suspense>
           );
         })}
       </section>

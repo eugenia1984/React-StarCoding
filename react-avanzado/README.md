@@ -271,6 +271,40 @@ useEffect(() => {
 
 ## :star2: 2. React Lazy & Suspense
 
+
+Podemos usar la técnica de **lazy loading** para esperar la carga de nuestros componentes. De este modo se cargan solo cuando se necesiten, como en Instagram que se va cargando a medida que vamos scroleando.
+
+Ayuda en el performance, asi se carga solo al scrolear.
+
+### Aplicando la técnica Lazy
+
+Si se quiere esperar hasta que un componente cargue, podemos aplicarlo de este modo. 
+
+Un gran **beneficio** que nos trae usar Lazy es que podemos **Cargar nuestra aplicaicón por "porciones"** para evitar cargar 1000 componentes a la primera.
+
+```JSX
+import React, { lazy, Suspence } from "react";
+
+const OtherComponent = lazy( () => import("./OtherComponent"));
+
+const ProductsContainer = () =>  {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <OtherComponent />
+    </Suspense>
+  )
+}
+```
+
+1. Se crea una constante, con el mismo nombre dle componente, para importar dicho componente.
+
+2. usamos la función **lazy** que viene del modulo "react" y se importa el componente.
+
+3. Se envuelve el componete con un ```<Suspense>```, el cual tiene un **fallack** que se ejecuta hasta que el componente carga.
+
+-> vamos a practicarlo con el proyecto que tenemos en el Challenge, lo hacemos en el **listado de productos**.
+
+
 ---
 
 ## :star2: 3. NextJS
