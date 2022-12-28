@@ -23,6 +23,21 @@ Crear una app sencilla, con 3 pantallas para repasar todos los conceptos vistos 
 
 :computer: -> [se puede ver en **challenge**](https://github.com/eugenia1984/React-StarCoding/tree/main/challenge)
 
+- Home:
+
+![image](https://user-images.githubusercontent.com/72580574/209830223-52e66896-3a1b-454b-9a09-84072ade41a4.png)
+
+
+- Listado de roductos:
+
+![image](https://user-images.githubusercontent.com/72580574/209830248-2c648ca3-2ad0-48c4-b1ab-3ecb52f020fa.png)
+
+
+- Detalle del producto:
+
+![image](https://user-images.githubusercontent.com/72580574/209830157-d6b276f6-6f20-433b-99cb-964cd203b2dc.png)
+
+
 ---
 
 ## :star2: 1. Introducción
