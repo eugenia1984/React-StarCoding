@@ -248,7 +248,7 @@ Lo setteo con el **useEffect**:
 ```JSX
 useEffect(() => {
   let result = listProducts.filter((element) => element.id === Number(id));
-  setProduct(result[0]]
+  setProduct(result[0])
 }, []);
 ```
 
