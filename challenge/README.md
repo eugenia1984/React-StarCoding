@@ -20,11 +20,19 @@ Primer práctica del curso **ReactAvanzado** junto a **Star Coding**.
 
 Tener una aplicación con tres pantallas:
 
-- Home
+- Home:
 
-- Listado de productos
+![image](https://user-images.githubusercontent.com/72580574/209829763-8ee93f7f-f4a6-490c-bbcc-6e4d25003a83.png)
 
-- Detalle de productos.
+
+- Listado de productos:
+
+![image](https://user-images.githubusercontent.com/72580574/209829806-6f44322d-a50e-4f95-a12c-eda4e950b9d5.png)
+
+
+- Detalle de producto, que se filtra según el id que recibe por parametro en la URL:
+
+![image](https://user-images.githubusercontent.com/72580574/209829963-0820fbbc-3832-41d9-a389-d690fe6b21f9.png)
 
 ---
 
