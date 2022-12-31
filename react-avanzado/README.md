@@ -42,9 +42,11 @@ Crear una app sencilla, con 3 pantallas para repasar todos los conceptos vistos 
 
 ## :star2: 1. Introducción
 
-### :star: 1.1 - Introoducción teórica
+### :star: 1.1 - Introducción teórica
+
 
 ### Repaso React.JS
+
 
 - ¿ Qué es React ?
 
@@ -54,7 +56,7 @@ Una **librería** de JavaScript, se utiliza para crear todo tipo de aplicaciones
 
 Hay dos formas...
 
-... basados en **clases**
+... **componentes** basados en **clases**
 
 ```JSX
 class Welcome extends React.Component {
@@ -66,7 +68,7 @@ class Welcome extends React.Component {
 
 El **render** es la función que retorna la UI.
 
-... basados en **funciones**
+... **componentes** basados en **funciones**
 
 ```JSX21
 const Welcome = (props) => {
